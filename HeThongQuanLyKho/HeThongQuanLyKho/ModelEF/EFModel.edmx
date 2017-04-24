@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="QuanLyKhoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ADMIN">
+          <Key>
+            <PropertyRef Name="tendangnhap" />
+          </Key>
+          <Property Name="tendangnhap" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="matkhau" Type="varchar" MaxLength="50" />
+          <Property Name="quanly" Type="int" />
+        </EntityType>
+        <EntityType Name="DONVI">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tendonvi" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="chucnang" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="HANGHOA">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tenhang" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="mota" Type="nvarchar" MaxLength="1024" />
+          <Property Name="donvitinh" Type="varchar" MaxLength="50" />
+          <Property Name="thoigianbaohanh" Type="int" />
+          <Property Name="manhom" Type="int" />
+        </EntityType>
+        <EntityType Name="HANGNHAP">
+          <Key>
+            <PropertyRef Name="Spnhap" />
+          </Key>
+          <Property Name="Spnhap" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Slchungtu" Type="int" />
+          <Property Name="Slthucnhap" Type="int" />
+          <Property Name="Sphieubaohang" Type="int" />
+          <Property Name="maHang" Type="int" />
+        </EntityType>
+        <EntityType Name="HANGXUAT">
+          <Key>
+            <PropertyRef Name="Spxuat" />
+          </Key>
+          <Property Name="Spxuat" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Slxuat" Type="int" />
+          <Property Name="maHang" Type="int" />
+          <Property Name="maNV" Type="int" />
+        </EntityType>
+        <EntityType Name="NHACUNGCAP">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tenNCC" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="diachi" Type="nvarchar" MaxLength="200" />
+          <Property Name="sodienthoai" Type="varchar" MaxLength="12" />
+        </EntityType>
+        <EntityType Name="NHANVIEN">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="hoten" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="ngaysinh" Type="datetime" />
+          <Property Name="gioitinh" Type="nvarchar" MaxLength="3" />
+          <Property Name="chuvu" Type="nvarchar" MaxLength="200" />
+          <Property Name="madonvi" Type="int" />
+        </EntityType>
+        <EntityType Name="NHOMHANG">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tennhom" Type="nvarchar" MaxLength="200" />
+          <Property Name="tacdung" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="PHIEUNHAP">
+          <Key>
+            <PropertyRef Name="Spnhap" />
+          </Key>
+          <Property Name="Spnhap" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="ngaynhap" Type="datetime" />
+          <Property Name="lydonhap" Type="nvarchar(max)" />
+          <Property Name="maNCC" Type="int" />
+          <Property Name="maNV" Type="int" />
+        </EntityType>
+        <EntityType Name="PHIEUXUAT">
+          <Key>
+            <PropertyRef Name="Spxuat" />
+          </Key>
+          <Property Name="Spxuat" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="ngayxuat" Type="datetime" />
+          <Property Name="lydoxuat" Type="nvarchar(max)" />
+          <Property Name="maNV" Type="int" />
+        </EntityType>
+        <Association Name="fk_hanghoa_nhomhang">
+          <End Role="NHOMHANG" Type="Self.NHOMHANG" Multiplicity="0..1" />
+          <End Role="HANGHOA" Type="Self.HANGHOA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHOMHANG">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="HANGHOA">
+              <PropertyRef Name="manhom" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_hangnhap">
+          <End Role="HANGHOA" Type="Self.HANGHOA" Multiplicity="0..1" />
+          <End Role="HANGNHAP" Type="Self.HANGNHAP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HANGHOA">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="HANGNHAP">
+              <PropertyRef Name="maHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_hangxuat_hanghoa">
+          <End Role="HANGHOA" Type="Self.HANGHOA" Multiplicity="0..1" />
+          <End Role="HANGXUAT" Type="Self.HANGXUAT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HANGHOA">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="HANGXUAT">
+              <PropertyRef Name="maHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_hangxuat_nhanvien">
+          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+          <End Role="HANGXUAT" Type="Self.HANGXUAT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="HANGXUAT">
+              <PropertyRef Name="maNV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_nhanvien_donvi">
+          <End Role="DONVI" Type="Self.DONVI" Multiplicity="0..1" />
+          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DONVI">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="NHANVIEN">
+              <PropertyRef Name="madonvi" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_phieunhap_ncc">
+          <End Role="NHACUNGCAP" Type="Self.NHACUNGCAP" Multiplicity="0..1" />
+          <End Role="PHIEUNHAP" Type="Self.PHIEUNHAP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHACUNGCAP">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="PHIEUNHAP">
+              <PropertyRef Name="maNCC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_phieunhap_nhanvien">
+          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+          <End Role="PHIEUNHAP" Type="Self.PHIEUNHAP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="PHIEUNHAP">
+              <PropertyRef Name="maNV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_phieuxuat">
+          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+          <End Role="PHIEUXUAT" Type="Self.PHIEUXUAT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="PHIEUXUAT">
+              <PropertyRef Name="maNV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QuanLyKhoModelStoreContainer">
+          <EntitySet Name="ADMIN" EntityType="Self.ADMIN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DONVI" EntityType="Self.DONVI" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HANGHOA" EntityType="Self.HANGHOA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HANGNHAP" EntityType="Self.HANGNHAP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HANGXUAT" EntityType="Self.HANGXUAT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NHACUNGCAP" EntityType="Self.NHACUNGCAP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NHANVIEN" EntityType="Self.NHANVIEN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NHOMHANG" EntityType="Self.NHOMHANG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PHIEUNHAP" EntityType="Self.PHIEUNHAP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PHIEUXUAT" EntityType="Self.PHIEUXUAT" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="fk_hanghoa_nhomhang" Association="Self.fk_hanghoa_nhomhang">
+            <End Role="NHOMHANG" EntitySet="NHOMHANG" />
+            <End Role="HANGHOA" EntitySet="HANGHOA" />
+          </AssociationSet>
+          <AssociationSet Name="fk_hangnhap" Association="Self.fk_hangnhap">
+            <End Role="HANGHOA" EntitySet="HANGHOA" />
+            <End Role="HANGNHAP" EntitySet="HANGNHAP" />
+          </AssociationSet>
+          <AssociationSet Name="fk_hangxuat_hanghoa" Association="Self.fk_hangxuat_hanghoa">
+            <End Role="HANGHOA" EntitySet="HANGHOA" />
+            <End Role="HANGXUAT" EntitySet="HANGXUAT" />
+          </AssociationSet>
+          <AssociationSet Name="fk_hangxuat_nhanvien" Association="Self.fk_hangxuat_nhanvien">
+            <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+            <End Role="HANGXUAT" EntitySet="HANGXUAT" />
+          </AssociationSet>
+          <AssociationSet Name="fk_nhanvien_donvi" Association="Self.fk_nhanvien_donvi">
+            <End Role="DONVI" EntitySet="DONVI" />
+            <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+          </AssociationSet>
+          <AssociationSet Name="fk_phieunhap_ncc" Association="Self.fk_phieunhap_ncc">
+            <End Role="NHACUNGCAP" EntitySet="NHACUNGCAP" />
+            <End Role="PHIEUNHAP" EntitySet="PHIEUNHAP" />
+          </AssociationSet>
+          <AssociationSet Name="fk_phieunhap_nhanvien" Association="Self.fk_phieunhap_nhanvien">
+            <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+            <End Role="PHIEUNHAP" EntitySet="PHIEUNHAP" />
+          </AssociationSet>
+          <AssociationSet Name="fk_phieuxuat" Association="Self.fk_phieuxuat">
+            <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+            <End Role="PHIEUXUAT" EntitySet="PHIEUXUAT" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QuanLyKhoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ADMIN">
+          <Key>
+            <PropertyRef Name="tendangnhap" />
+          </Key>
+          <Property Name="tendangnhap" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="matkhau" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="quanly" Type="Int32" />
+        </EntityType>
+        <EntityType Name="DONVI">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tendonvi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="chucnang" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="NHANVIENs" Relationship="Self.fk_nhanvien_donvi" FromRole="DONVI" ToRole="NHANVIEN" />
+        </EntityType>
+        <EntityType Name="HANGHOA">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tenhang" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mota" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="donvitinh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="thoigianbaohanh" Type="Int32" />
+          <Property Name="manhom" Type="Int32" />
+          <NavigationProperty Name="NHOMHANG" Relationship="Self.fk_hanghoa_nhomhang" FromRole="HANGHOA" ToRole="NHOMHANG" />
+          <NavigationProperty Name="HANGNHAPs" Relationship="Self.fk_hangnhap" FromRole="HANGHOA" ToRole="HANGNHAP" />
+          <NavigationProperty Name="HANGXUATs" Relationship="Self.fk_hangxuat_hanghoa" FromRole="HANGHOA" ToRole="HANGXUAT" />
+        </EntityType>
+        <EntityType Name="HANGNHAP">
+          <Key>
+            <PropertyRef Name="Spnhap" />
+          </Key>
+          <Property Name="Spnhap" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Slchungtu" Type="Int32" />
+          <Property Name="Slthucnhap" Type="Int32" />
+          <Property Name="Sphieubaohang" Type="Int32" />
+          <Property Name="maHang" Type="Int32" />
+          <NavigationProperty Name="HANGHOA" Relationship="Self.fk_hangnhap" FromRole="HANGNHAP" ToRole="HANGHOA" />
+        </EntityType>
+        <EntityType Name="HANGXUAT">
+          <Key>
+            <PropertyRef Name="Spxuat" />
+          </Key>
+          <Property Name="Spxuat" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Slxuat" Type="Int32" />
+          <Property Name="maHang" Type="Int32" />
+          <Property Name="maNV" Type="Int32" />
+          <NavigationProperty Name="HANGHOA" Relationship="Self.fk_hangxuat_hanghoa" FromRole="HANGXUAT" ToRole="HANGHOA" />
+          <NavigationProperty Name="NHANVIEN" Relationship="Self.fk_hangxuat_nhanvien" FromRole="HANGXUAT" ToRole="NHANVIEN" />
+        </EntityType>
+        <EntityType Name="NHACUNGCAP">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tenNCC" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="diachi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="sodienthoai" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PHIEUNHAPs" Relationship="Self.fk_phieunhap_ncc" FromRole="NHACUNGCAP" ToRole="PHIEUNHAP" />
+        </EntityType>
+        <EntityType Name="NHANVIEN">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="hoten" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ngaysinh" Type="DateTime" Precision="3" />
+          <Property Name="gioitinh" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="chuvu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="madonvi" Type="Int32" />
+          <NavigationProperty Name="DONVI" Relationship="Self.fk_nhanvien_donvi" FromRole="NHANVIEN" ToRole="DONVI" />
+          <NavigationProperty Name="HANGXUATs" Relationship="Self.fk_hangxuat_nhanvien" FromRole="NHANVIEN" ToRole="HANGXUAT" />
+          <NavigationProperty Name="PHIEUNHAPs" Relationship="Self.fk_phieunhap_nhanvien" FromRole="NHANVIEN" ToRole="PHIEUNHAP" />
+          <NavigationProperty Name="PHIEUXUATs" Relationship="Self.fk_phieuxuat" FromRole="NHANVIEN" ToRole="PHIEUXUAT" />
+        </EntityType>
+        <EntityType Name="NHOMHANG">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tennhom" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="tacdung" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="HANGHOAs" Relationship="Self.fk_hanghoa_nhomhang" FromRole="NHOMHANG" ToRole="HANGHOA" />
+        </EntityType>
+        <EntityType Name="PHIEUNHAP">
+          <Key>
+            <PropertyRef Name="Spnhap" />
+          </Key>
+          <Property Name="Spnhap" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ngaynhap" Type="DateTime" Precision="3" />
+          <Property Name="lydonhap" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="maNCC" Type="Int32" />
+          <Property Name="maNV" Type="Int32" />
+          <NavigationProperty Name="NHACUNGCAP" Relationship="Self.fk_phieunhap_ncc" FromRole="PHIEUNHAP" ToRole="NHACUNGCAP" />
+          <NavigationProperty Name="NHANVIEN" Relationship="Self.fk_phieunhap_nhanvien" FromRole="PHIEUNHAP" ToRole="NHANVIEN" />
+        </EntityType>
+        <EntityType Name="PHIEUXUAT">
+          <Key>
+            <PropertyRef Name="Spxuat" />
+          </Key>
+          <Property Name="Spxuat" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ngayxuat" Type="DateTime" Precision="3" />
+          <Property Name="lydoxuat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="maNV" Type="Int32" />
+          <NavigationProperty Name="NHANVIEN" Relationship="Self.fk_phieuxuat" FromRole="PHIEUXUAT" ToRole="NHANVIEN" />
+        </EntityType>
+        <Association Name="fk_nhanvien_donvi">
+          <End Role="DONVI" Type="Self.DONVI" Multiplicity="0..1" />
+          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DONVI">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="NHANVIEN">
+              <PropertyRef Name="madonvi" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_hanghoa_nhomhang">
+          <End Role="NHOMHANG" Type="Self.NHOMHANG" Multiplicity="0..1" />
+          <End Role="HANGHOA" Type="Self.HANGHOA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHOMHANG">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="HANGHOA">
+              <PropertyRef Name="manhom" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_hangnhap">
+          <End Role="HANGHOA" Type="Self.HANGHOA" Multiplicity="0..1" />
+          <End Role="HANGNHAP" Type="Self.HANGNHAP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HANGHOA">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="HANGNHAP">
+              <PropertyRef Name="maHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_hangxuat_hanghoa">
+          <End Role="HANGHOA" Type="Self.HANGHOA" Multiplicity="0..1" />
+          <End Role="HANGXUAT" Type="Self.HANGXUAT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HANGHOA">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="HANGXUAT">
+              <PropertyRef Name="maHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_hangxuat_nhanvien">
+          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+          <End Role="HANGXUAT" Type="Self.HANGXUAT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="HANGXUAT">
+              <PropertyRef Name="maNV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_phieunhap_ncc">
+          <End Role="NHACUNGCAP" Type="Self.NHACUNGCAP" Multiplicity="0..1" />
+          <End Role="PHIEUNHAP" Type="Self.PHIEUNHAP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHACUNGCAP">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="PHIEUNHAP">
+              <PropertyRef Name="maNCC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_phieunhap_nhanvien">
+          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+          <End Role="PHIEUNHAP" Type="Self.PHIEUNHAP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="PHIEUNHAP">
+              <PropertyRef Name="maNV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_phieuxuat">
+          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+          <End Role="PHIEUXUAT" Type="Self.PHIEUXUAT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="PHIEUXUAT">
+              <PropertyRef Name="maNV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QLKEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ADMINs" EntityType="Self.ADMIN" />
+          <EntitySet Name="DONVIs" EntityType="Self.DONVI" />
+          <EntitySet Name="HANGHOAs" EntityType="Self.HANGHOA" />
+          <EntitySet Name="HANGNHAPs" EntityType="Self.HANGNHAP" />
+          <EntitySet Name="HANGXUATs" EntityType="Self.HANGXUAT" />
+          <EntitySet Name="NHACUNGCAPs" EntityType="Self.NHACUNGCAP" />
+          <EntitySet Name="NHANVIENs" EntityType="Self.NHANVIEN" />
+          <EntitySet Name="NHOMHANGs" EntityType="Self.NHOMHANG" />
+          <EntitySet Name="PHIEUNHAPs" EntityType="Self.PHIEUNHAP" />
+          <EntitySet Name="PHIEUXUATs" EntityType="Self.PHIEUXUAT" />
+          <AssociationSet Name="fk_nhanvien_donvi" Association="Self.fk_nhanvien_donvi">
+            <End Role="DONVI" EntitySet="DONVIs" />
+            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+          </AssociationSet>
+          <AssociationSet Name="fk_hanghoa_nhomhang" Association="Self.fk_hanghoa_nhomhang">
+            <End Role="NHOMHANG" EntitySet="NHOMHANGs" />
+            <End Role="HANGHOA" EntitySet="HANGHOAs" />
+          </AssociationSet>
+          <AssociationSet Name="fk_hangnhap" Association="Self.fk_hangnhap">
+            <End Role="HANGHOA" EntitySet="HANGHOAs" />
+            <End Role="HANGNHAP" EntitySet="HANGNHAPs" />
+          </AssociationSet>
+          <AssociationSet Name="fk_hangxuat_hanghoa" Association="Self.fk_hangxuat_hanghoa">
+            <End Role="HANGHOA" EntitySet="HANGHOAs" />
+            <End Role="HANGXUAT" EntitySet="HANGXUATs" />
+          </AssociationSet>
+          <AssociationSet Name="fk_hangxuat_nhanvien" Association="Self.fk_hangxuat_nhanvien">
+            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+            <End Role="HANGXUAT" EntitySet="HANGXUATs" />
+          </AssociationSet>
+          <AssociationSet Name="fk_phieunhap_ncc" Association="Self.fk_phieunhap_ncc">
+            <End Role="NHACUNGCAP" EntitySet="NHACUNGCAPs" />
+            <End Role="PHIEUNHAP" EntitySet="PHIEUNHAPs" />
+          </AssociationSet>
+          <AssociationSet Name="fk_phieunhap_nhanvien" Association="Self.fk_phieunhap_nhanvien">
+            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+            <End Role="PHIEUNHAP" EntitySet="PHIEUNHAPs" />
+          </AssociationSet>
+          <AssociationSet Name="fk_phieuxuat" Association="Self.fk_phieuxuat">
+            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+            <End Role="PHIEUXUAT" EntitySet="PHIEUXUATs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QuanLyKhoModelStoreContainer" CdmEntityContainer="QLKEntities">
+          <EntitySetMapping Name="ADMINs">
+            <EntityTypeMapping TypeName="QuanLyKhoModel.ADMIN">
+              <MappingFragment StoreEntitySet="ADMIN">
+                <ScalarProperty Name="tendangnhap" ColumnName="tendangnhap" />
+                <ScalarProperty Name="matkhau" ColumnName="matkhau" />
+                <ScalarProperty Name="quanly" ColumnName="quanly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DONVIs">
+            <EntityTypeMapping TypeName="QuanLyKhoModel.DONVI">
+              <MappingFragment StoreEntitySet="DONVI">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="tendonvi" ColumnName="tendonvi" />
+                <ScalarProperty Name="chucnang" ColumnName="chucnang" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HANGHOAs">
+            <EntityTypeMapping TypeName="QuanLyKhoModel.HANGHOA">
+              <MappingFragment StoreEntitySet="HANGHOA">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="tenhang" ColumnName="tenhang" />
+                <ScalarProperty Name="mota" ColumnName="mota" />
+                <ScalarProperty Name="donvitinh" ColumnName="donvitinh" />
+                <ScalarProperty Name="thoigianbaohanh" ColumnName="thoigianbaohanh" />
+                <ScalarProperty Name="manhom" ColumnName="manhom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HANGNHAPs">
+            <EntityTypeMapping TypeName="QuanLyKhoModel.HANGNHAP">
+              <MappingFragment StoreEntitySet="HANGNHAP">
+                <ScalarProperty Name="Spnhap" ColumnName="Spnhap" />
+                <ScalarProperty Name="Slchungtu" ColumnName="Slchungtu" />
+                <ScalarProperty Name="Slthucnhap" ColumnName="Slthucnhap" />
+                <ScalarProperty Name="Sphieubaohang" ColumnName="Sphieubaohang" />
+                <ScalarProperty Name="maHang" ColumnName="maHang" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HANGXUATs">
+            <EntityTypeMapping TypeName="QuanLyKhoModel.HANGXUAT">
+              <MappingFragment StoreEntitySet="HANGXUAT">
+                <ScalarProperty Name="Spxuat" ColumnName="Spxuat" />
+                <ScalarProperty Name="Slxuat" ColumnName="Slxuat" />
+                <ScalarProperty Name="maHang" ColumnName="maHang" />
+                <ScalarProperty Name="maNV" ColumnName="maNV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NHACUNGCAPs">
+            <EntityTypeMapping TypeName="QuanLyKhoModel.NHACUNGCAP">
+              <MappingFragment StoreEntitySet="NHACUNGCAP">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="tenNCC" ColumnName="tenNCC" />
+                <ScalarProperty Name="diachi" ColumnName="diachi" />
+                <ScalarProperty Name="sodienthoai" ColumnName="sodienthoai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NHANVIENs">
+            <EntityTypeMapping TypeName="QuanLyKhoModel.NHANVIEN">
+              <MappingFragment StoreEntitySet="NHANVIEN">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="hoten" ColumnName="hoten" />
+                <ScalarProperty Name="ngaysinh" ColumnName="ngaysinh" />
+                <ScalarProperty Name="gioitinh" ColumnName="gioitinh" />
+                <ScalarProperty Name="chuvu" ColumnName="chuvu" />
+                <ScalarProperty Name="madonvi" ColumnName="madonvi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NHOMHANGs">
+            <EntityTypeMapping TypeName="QuanLyKhoModel.NHOMHANG">
+              <MappingFragment StoreEntitySet="NHOMHANG">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="tennhom" ColumnName="tennhom" />
+                <ScalarProperty Name="tacdung" ColumnName="tacdung" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PHIEUNHAPs">
+            <EntityTypeMapping TypeName="QuanLyKhoModel.PHIEUNHAP">
+              <MappingFragment StoreEntitySet="PHIEUNHAP">
+                <ScalarProperty Name="Spnhap" ColumnName="Spnhap" />
+                <ScalarProperty Name="ngaynhap" ColumnName="ngaynhap" />
+                <ScalarProperty Name="lydonhap" ColumnName="lydonhap" />
+                <ScalarProperty Name="maNCC" ColumnName="maNCC" />
+                <ScalarProperty Name="maNV" ColumnName="maNV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PHIEUXUATs">
+            <EntityTypeMapping TypeName="QuanLyKhoModel.PHIEUXUAT">
+              <MappingFragment StoreEntitySet="PHIEUXUAT">
+                <ScalarProperty Name="Spxuat" ColumnName="Spxuat" />
+                <ScalarProperty Name="ngayxuat" ColumnName="ngayxuat" />
+                <ScalarProperty Name="lydoxuat" ColumnName="lydoxuat" />
+                <ScalarProperty Name="maNV" ColumnName="maNV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
