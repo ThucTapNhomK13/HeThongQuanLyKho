@@ -33,15 +33,15 @@
             this.TLogout = new MetroFramework.Controls.MetroTile();
             this.TGoods = new MetroFramework.Controls.MetroTile();
             this.TAdmin = new MetroFramework.Controls.MetroTile();
-            this.TGroup = new MetroFramework.Controls.MetroTile();
             this.TImport = new MetroFramework.Controls.MetroTile();
             this.TExport = new MetroFramework.Controls.MetroTile();
+            this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
             // 
             // TUser
             // 
             this.TUser.ActiveControl = null;
-            this.TUser.Location = new System.Drawing.Point(159, 109);
+            this.TUser.Location = new System.Drawing.Point(231, 105);
             this.TUser.Name = "TUser";
             this.TUser.Size = new System.Drawing.Size(276, 95);
             this.TUser.TabIndex = 0;
@@ -55,7 +55,7 @@
             // TLogin
             // 
             this.TLogin.ActiveControl = null;
-            this.TLogin.Location = new System.Drawing.Point(159, 210);
+            this.TLogin.Location = new System.Drawing.Point(231, 206);
             this.TLogin.Name = "TLogin";
             this.TLogin.Size = new System.Drawing.Size(135, 95);
             this.TLogin.TabIndex = 1;
@@ -69,7 +69,7 @@
             // TLogout
             // 
             this.TLogout.ActiveControl = null;
-            this.TLogout.Location = new System.Drawing.Point(300, 210);
+            this.TLogout.Location = new System.Drawing.Point(372, 206);
             this.TLogout.Name = "TLogout";
             this.TLogout.Size = new System.Drawing.Size(135, 95);
             this.TLogout.TabIndex = 2;
@@ -83,9 +83,9 @@
             // TGoods
             // 
             this.TGoods.ActiveControl = null;
-            this.TGoods.Location = new System.Drawing.Point(159, 335);
+            this.TGoods.Location = new System.Drawing.Point(612, 432);
             this.TGoods.Name = "TGoods";
-            this.TGoods.Size = new System.Drawing.Size(276, 196);
+            this.TGoods.Size = new System.Drawing.Size(276, 95);
             this.TGoods.TabIndex = 4;
             this.TGoods.Text = "Hàng hóa";
             this.TGoods.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -97,7 +97,7 @@
             // TAdmin
             // 
             this.TAdmin.ActiveControl = null;
-            this.TAdmin.Location = new System.Drawing.Point(592, 109);
+            this.TAdmin.Location = new System.Drawing.Point(612, 105);
             this.TAdmin.Name = "TAdmin";
             this.TAdmin.Size = new System.Drawing.Size(276, 196);
             this.TAdmin.TabIndex = 6;
@@ -108,26 +108,12 @@
             this.TAdmin.UseSelectable = true;
             this.TAdmin.Click += new System.EventHandler(this.TAdmin_Click);
             // 
-            // TGroup
-            // 
-            this.TGroup.ActiveControl = null;
-            this.TGroup.Location = new System.Drawing.Point(592, 335);
-            this.TGroup.Name = "TGroup";
-            this.TGroup.Size = new System.Drawing.Size(135, 196);
-            this.TGroup.TabIndex = 7;
-            this.TGroup.Text = "Nhóm hàng";
-            this.TGroup.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.TGroup.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.TGroup.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.TGroup.UseSelectable = true;
-            this.TGroup.Click += new System.EventHandler(this.TGroup_Click);
-            // 
             // TImport
             // 
             this.TImport.ActiveControl = null;
-            this.TImport.Location = new System.Drawing.Point(733, 335);
+            this.TImport.Location = new System.Drawing.Point(612, 331);
             this.TImport.Name = "TImport";
-            this.TImport.Size = new System.Drawing.Size(135, 95);
+            this.TImport.Size = new System.Drawing.Size(130, 95);
             this.TImport.TabIndex = 8;
             this.TImport.Text = "Nhập kho";
             this.TImport.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -139,9 +125,9 @@
             // TExport
             // 
             this.TExport.ActiveControl = null;
-            this.TExport.Location = new System.Drawing.Point(733, 436);
+            this.TExport.Location = new System.Drawing.Point(748, 331);
             this.TExport.Name = "TExport";
-            this.TExport.Size = new System.Drawing.Size(135, 95);
+            this.TExport.Size = new System.Drawing.Size(140, 95);
             this.TExport.TabIndex = 9;
             this.TExport.Text = "Xuất kho";
             this.TExport.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -150,20 +136,34 @@
             this.TExport.UseSelectable = true;
             this.TExport.Click += new System.EventHandler(this.TExport_Click);
             // 
+            // metroTile1
+            // 
+            this.metroTile1.ActiveControl = null;
+            this.metroTile1.Location = new System.Drawing.Point(231, 331);
+            this.metroTile1.Name = "metroTile1";
+            this.metroTile1.Size = new System.Drawing.Size(276, 196);
+            this.metroTile1.TabIndex = 10;
+            this.metroTile1.Text = "Trợ giúp";
+            this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile1.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTile1.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.metroTile1.UseSelectable = true;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 572);
+            this.Controls.Add(this.metroTile1);
             this.Controls.Add(this.TExport);
             this.Controls.Add(this.TImport);
-            this.Controls.Add(this.TGroup);
             this.Controls.Add(this.TAdmin);
             this.Controls.Add(this.TGoods);
             this.Controls.Add(this.TLogout);
             this.Controls.Add(this.TLogin);
             this.Controls.Add(this.TUser);
             this.Name = "frmMain";
+            this.Opacity = 0.8D;
             this.Text = "Hệ thống quản lý kho";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -178,9 +178,9 @@
         private MetroFramework.Controls.MetroTile TLogout;
         private MetroFramework.Controls.MetroTile TGoods;
         private MetroFramework.Controls.MetroTile TAdmin;
-        private MetroFramework.Controls.MetroTile TGroup;
         private MetroFramework.Controls.MetroTile TImport;
         private MetroFramework.Controls.MetroTile TExport;
+        private MetroFramework.Controls.MetroTile metroTile1;
     }
 }
 
