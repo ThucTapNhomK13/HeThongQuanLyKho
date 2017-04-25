@@ -41,7 +41,7 @@
             // TUser
             // 
             this.TUser.ActiveControl = null;
-            this.TUser.Location = new System.Drawing.Point(231, 105);
+            this.TUser.Location = new System.Drawing.Point(269, 105);
             this.TUser.Name = "TUser";
             this.TUser.Size = new System.Drawing.Size(276, 95);
             this.TUser.TabIndex = 0;
@@ -55,7 +55,7 @@
             // TLogin
             // 
             this.TLogin.ActiveControl = null;
-            this.TLogin.Location = new System.Drawing.Point(231, 206);
+            this.TLogin.Location = new System.Drawing.Point(269, 206);
             this.TLogin.Name = "TLogin";
             this.TLogin.Size = new System.Drawing.Size(135, 95);
             this.TLogin.TabIndex = 1;
@@ -69,7 +69,7 @@
             // TLogout
             // 
             this.TLogout.ActiveControl = null;
-            this.TLogout.Location = new System.Drawing.Point(372, 206);
+            this.TLogout.Location = new System.Drawing.Point(410, 206);
             this.TLogout.Name = "TLogout";
             this.TLogout.Size = new System.Drawing.Size(135, 95);
             this.TLogout.TabIndex = 2;
@@ -83,7 +83,7 @@
             // TGoods
             // 
             this.TGoods.ActiveControl = null;
-            this.TGoods.Location = new System.Drawing.Point(612, 432);
+            this.TGoods.Location = new System.Drawing.Point(551, 432);
             this.TGoods.Name = "TGoods";
             this.TGoods.Size = new System.Drawing.Size(276, 95);
             this.TGoods.TabIndex = 4;
@@ -97,7 +97,7 @@
             // TAdmin
             // 
             this.TAdmin.ActiveControl = null;
-            this.TAdmin.Location = new System.Drawing.Point(612, 105);
+            this.TAdmin.Location = new System.Drawing.Point(551, 105);
             this.TAdmin.Name = "TAdmin";
             this.TAdmin.Size = new System.Drawing.Size(276, 196);
             this.TAdmin.TabIndex = 6;
@@ -111,7 +111,7 @@
             // TImport
             // 
             this.TImport.ActiveControl = null;
-            this.TImport.Location = new System.Drawing.Point(612, 331);
+            this.TImport.Location = new System.Drawing.Point(551, 331);
             this.TImport.Name = "TImport";
             this.TImport.Size = new System.Drawing.Size(130, 95);
             this.TImport.TabIndex = 8;
@@ -125,7 +125,7 @@
             // TExport
             // 
             this.TExport.ActiveControl = null;
-            this.TExport.Location = new System.Drawing.Point(748, 331);
+            this.TExport.Location = new System.Drawing.Point(687, 331);
             this.TExport.Name = "TExport";
             this.TExport.Size = new System.Drawing.Size(140, 95);
             this.TExport.TabIndex = 9;
@@ -139,7 +139,7 @@
             // metroTile1
             // 
             this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(231, 331);
+            this.metroTile1.Location = new System.Drawing.Point(269, 331);
             this.metroTile1.Name = "metroTile1";
             this.metroTile1.Size = new System.Drawing.Size(276, 196);
             this.metroTile1.TabIndex = 10;
@@ -163,7 +163,6 @@
             this.Controls.Add(this.TLogin);
             this.Controls.Add(this.TUser);
             this.Name = "frmMain";
-            this.Opacity = 0.8D;
             this.Text = "Hệ thống quản lý kho";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Load += new System.EventHandler(this.Form1_Load);
