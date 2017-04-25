@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyKhoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ADMIN">
+    <Key>
+      <PropertyRef Name="tendangnhap" />
+    </Key>
+    <Property Name="tendangnhap" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="matkhau" Type="varchar" MaxLength="50" />
+    <Property Name="quanly" Type="int" />
+  </EntityType>
+  <EntityType Name="DONVI">
+    <Key>
+      <PropertyRef Name="ma" />
+    </Key>
+    <Property Name="ma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tendonvi" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="chucnang" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="HANGHOA">
+    <Key>
+      <PropertyRef Name="ma" />
+    </Key>
+    <Property Name="ma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tenhang" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="mota" Type="nvarchar" MaxLength="1024" />
+    <Property Name="donvitinh" Type="varchar" MaxLength="50" />
+    <Property Name="thoigianbaohanh" Type="int" />
+    <Property Name="manhom" Type="int" />
+  </EntityType>
+  <EntityType Name="HANGNHAP">
+    <Key>
+      <PropertyRef Name="Spnhap" />
+    </Key>
+    <Property Name="Spnhap" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Slchungtu" Type="int" />
+    <Property Name="Slthucnhap" Type="int" />
+    <Property Name="Sphieubaohang" Type="int" />
+    <Property Name="maHang" Type="int" />
+  </EntityType>
+  <EntityType Name="HANGXUAT">
+    <Key>
+      <PropertyRef Name="Spxuat" />
+    </Key>
+    <Property Name="Spxuat" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Slxuat" Type="int" />
+    <Property Name="maHang" Type="int" />
+    <Property Name="maNV" Type="int" />
+  </EntityType>
+  <EntityType Name="NHACUNGCAP">
+    <Key>
+      <PropertyRef Name="ma" />
+    </Key>
+    <Property Name="ma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tenNCC" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="diachi" Type="nvarchar" MaxLength="200" />
+    <Property Name="sodienthoai" Type="varchar" MaxLength="12" />
+  </EntityType>
+  <EntityType Name="NHANVIEN">
+    <Key>
+      <PropertyRef Name="ma" />
+    </Key>
+    <Property Name="ma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="hoten" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="ngaysinh" Type="datetime" />
+    <Property Name="gioitinh" Type="nvarchar" MaxLength="3" />
+    <Property Name="chuvu" Type="nvarchar" MaxLength="200" />
+    <Property Name="madonvi" Type="int" />
+  </EntityType>
+  <EntityType Name="NHOMHANG">
+    <Key>
+      <PropertyRef Name="ma" />
+    </Key>
+    <Property Name="ma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tennhom" Type="nvarchar" MaxLength="200" />
+    <Property Name="tacdung" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="PHIEUNHAP">
+    <Key>
+      <PropertyRef Name="Spnhap" />
+    </Key>
+    <Property Name="Spnhap" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="ngaynhap" Type="datetime" />
+    <Property Name="lydonhap" Type="nvarchar(max)" />
+    <Property Name="maNCC" Type="int" />
+    <Property Name="maNV" Type="int" />
+  </EntityType>
+  <EntityType Name="PHIEUXUAT">
+    <Key>
+      <PropertyRef Name="Spxuat" />
+    </Key>
+    <Property Name="Spxuat" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="ngayxuat" Type="datetime" />
+    <Property Name="lydoxuat" Type="nvarchar(max)" />
+    <Property Name="maNV" Type="int" />
+  </EntityType>
+  <Association Name="fk_hanghoa_nhomhang">
+    <End Role="NHOMHANG" Type="Self.NHOMHANG" Multiplicity="0..1" />
+    <End Role="HANGHOA" Type="Self.HANGHOA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHOMHANG">
+        <PropertyRef Name="ma" />
+      </Principal>
+      <Dependent Role="HANGHOA">
+        <PropertyRef Name="manhom" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_hangnhap">
+    <End Role="HANGHOA" Type="Self.HANGHOA" Multiplicity="0..1" />
+    <End Role="HANGNHAP" Type="Self.HANGNHAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HANGHOA">
+        <PropertyRef Name="ma" />
+      </Principal>
+      <Dependent Role="HANGNHAP">
+        <PropertyRef Name="maHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_hangxuat_hanghoa">
+    <End Role="HANGHOA" Type="Self.HANGHOA" Multiplicity="0..1" />
+    <End Role="HANGXUAT" Type="Self.HANGXUAT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HANGHOA">
+        <PropertyRef Name="ma" />
+      </Principal>
+      <Dependent Role="HANGXUAT">
+        <PropertyRef Name="maHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_hangxuat_nhanvien">
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+    <End Role="HANGXUAT" Type="Self.HANGXUAT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="ma" />
+      </Principal>
+      <Dependent Role="HANGXUAT">
+        <PropertyRef Name="maNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_nhanvien_donvi">
+    <End Role="DONVI" Type="Self.DONVI" Multiplicity="0..1" />
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DONVI">
+        <PropertyRef Name="ma" />
+      </Principal>
+      <Dependent Role="NHANVIEN">
+        <PropertyRef Name="madonvi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_phieunhap_ncc">
+    <End Role="NHACUNGCAP" Type="Self.NHACUNGCAP" Multiplicity="0..1" />
+    <End Role="PHIEUNHAP" Type="Self.PHIEUNHAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHACUNGCAP">
+        <PropertyRef Name="ma" />
+      </Principal>
+      <Dependent Role="PHIEUNHAP">
+        <PropertyRef Name="maNCC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_phieunhap_nhanvien">
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+    <End Role="PHIEUNHAP" Type="Self.PHIEUNHAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="ma" />
+      </Principal>
+      <Dependent Role="PHIEUNHAP">
+        <PropertyRef Name="maNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_phieuxuat">
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+    <End Role="PHIEUXUAT" Type="Self.PHIEUXUAT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="ma" />
+      </Principal>
+      <Dependent Role="PHIEUXUAT">
+        <PropertyRef Name="maNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QuanLyKhoModelStoreContainer">
+    <EntitySet Name="ADMIN" EntityType="Self.ADMIN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DONVI" EntityType="Self.DONVI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HANGHOA" EntityType="Self.HANGHOA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HANGNHAP" EntityType="Self.HANGNHAP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HANGXUAT" EntityType="Self.HANGXUAT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NHACUNGCAP" EntityType="Self.NHACUNGCAP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NHANVIEN" EntityType="Self.NHANVIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NHOMHANG" EntityType="Self.NHOMHANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHIEUNHAP" EntityType="Self.PHIEUNHAP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHIEUXUAT" EntityType="Self.PHIEUXUAT" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_hanghoa_nhomhang" Association="Self.fk_hanghoa_nhomhang">
+      <End Role="NHOMHANG" EntitySet="NHOMHANG" />
+      <End Role="HANGHOA" EntitySet="HANGHOA" />
+    </AssociationSet>
+    <AssociationSet Name="fk_hangnhap" Association="Self.fk_hangnhap">
+      <End Role="HANGHOA" EntitySet="HANGHOA" />
+      <End Role="HANGNHAP" EntitySet="HANGNHAP" />
+    </AssociationSet>
+    <AssociationSet Name="fk_hangxuat_hanghoa" Association="Self.fk_hangxuat_hanghoa">
+      <End Role="HANGHOA" EntitySet="HANGHOA" />
+      <End Role="HANGXUAT" EntitySet="HANGXUAT" />
+    </AssociationSet>
+    <AssociationSet Name="fk_hangxuat_nhanvien" Association="Self.fk_hangxuat_nhanvien">
+      <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+      <End Role="HANGXUAT" EntitySet="HANGXUAT" />
+    </AssociationSet>
+    <AssociationSet Name="fk_nhanvien_donvi" Association="Self.fk_nhanvien_donvi">
+      <End Role="DONVI" EntitySet="DONVI" />
+      <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+    </AssociationSet>
+    <AssociationSet Name="fk_phieunhap_ncc" Association="Self.fk_phieunhap_ncc">
+      <End Role="NHACUNGCAP" EntitySet="NHACUNGCAP" />
+      <End Role="PHIEUNHAP" EntitySet="PHIEUNHAP" />
+    </AssociationSet>
+    <AssociationSet Name="fk_phieunhap_nhanvien" Association="Self.fk_phieunhap_nhanvien">
+      <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+      <End Role="PHIEUNHAP" EntitySet="PHIEUNHAP" />
+    </AssociationSet>
+    <AssociationSet Name="fk_phieuxuat" Association="Self.fk_phieuxuat">
+      <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+      <End Role="PHIEUXUAT" EntitySet="PHIEUXUAT" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

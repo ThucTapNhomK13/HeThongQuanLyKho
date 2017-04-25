@@ -55,10 +55,26 @@ namespace HeThongQuanLyKho
             using (QLKEntities db = new QLKEntities())
             {
                 DONVI dv = dONVIBindingSource.Current as DONVI;
-                db.DONVIs.Add(dv);
-                db.SaveChanges();
-                
-                LoadDonVi();
+                var DVd = db.DONVIs.Where(x => x.tendonvi == dv.tendonvi).FirstOrDefault<DONVI>();
+
+                if (DVd == null)
+                {
+                    db.DONVIs.Add(dv);
+                    db.SaveChanges();
+
+                    LoadDonVi();
+                }
+                else if (string.IsNullOrEmpty(txtChucNangDonVi.Text) && string.IsNullOrEmpty(txtTenDonVi.Text))
+                {
+                    MessageBox.Show("Bạn chưa nhập dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
             }
         }
 
@@ -73,6 +89,56 @@ namespace HeThongQuanLyKho
         {
             txtTenNhom.Clear();
             txtTacDung.Clear();
+        }
+
+        private void btnNhapLaiDV_Click(object sender, EventArgs e)
+        {
+            txtTenDonVi.Clear();
+            txtChucNangDonVi.Clear();
+        }
+
+        private void btnXoaDonVi_Click(object sender, EventArgs e)
+        {
+            using (QLKEntities db = new QLKEntities())
+            {
+                DONVI dv = dONVIBindingSource.Current as DONVI;
+                var DVd = db.DONVIs.Where(x => x.ma == dv.ma).SingleOrDefault();
+                if (DVd != null)
+                {
+                    db.DONVIs.Attach(DVd);
+                    db.DONVIs.Remove(DVd);
+                    db.SaveChanges();
+                    MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadDonVi();
+                }
+                else
+                {
+                    MessageBox.Show("Không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+        }
+
+        private void btnSuaDonVi_Click(object sender, EventArgs e)
+        {
+            using (QLKEntities db = new QLKEntities())
+            {
+                var dv = dONVIBindingSource.Current as DONVI;
+                var Dvd = db.DONVIs.SingleOrDefault(x => x.ma == dv.ma);
+
+                if (Dvd != null)
+                {
+                    Dvd.tendonvi = dv.tendonvi;
+                    Dvd.chucnang = dv.chucnang;
+
+                    db.DONVIs.Attach(Dvd);
+                    db.Entry(Dvd).State = EntityState.Modified;
+                    db.SaveChanges();
+                    LoadDonVi();
+                }
+                
+                
+            }
         }
     }
 }
