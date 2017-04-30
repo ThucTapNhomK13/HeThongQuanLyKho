@@ -117,32 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="metroTextBox4.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAdxJREFUOE+9
-        lL1OAkEUhdndAYTEUGgsDIUlBk3oTKyI4RF8BZ/AzoqORhNfws4XsLKwMaHxDSxMSGg0xEIbwfMNd9dZ
-        lx8rT3IycO/dM3Pnnt3Sf+BIvBFHURR9iW9xHN/p/6kYiTn0et1IdGKZ1cIeFF+KU3Emkc8kSZ61Tvhv
-        RLghephYTazbmtsQMR4a12obZ53O4Y4KNtvtVqLYifhk+QeRE8XkxYatOTHa5GTj7e2tg6Ao9tk56uKj
-        ONM1nFt+UZ0HdzbjZKuKhJY4dc69rKkrjbiztM1lRcQlNhRn1snCuhLTZADrxMhXKpVb5xKGdmypIswa
-        ExtAAamY2CiX3b1CDGffJwMoPx+MxLADRUwzh1Cs2dzdU+hDfBVzmyMmZj7EtAhiDabpEYqxqhM/PPHK
-        FxisDh+WLeRNnZ4Sa7SsKDtZIAYHokdQh7lzbwpvAKblAawxZAB2Z7SZiqXsB2J0UHhTgMO0+AxrME3F
-        IHdGm5wsE61WKwMTQ7QglrszfGbWYJrhAPqi34xNTbRoNXZIxWxd6kdEfnXAJj9QUfrVWCtm+QaiCmXt
-        ixfiHCrg68GU/iQW1Pn2je/iHErycVw4JUDc8ou+e5wMsessrh+ccJVY9kVeXdd133vCuzSMOOrTAAAA
-        AElFTkSuQmCC
-</value>
-  </data>
-  <data name="metroTile1.TileImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAASxJREFUSEvt
-        VkEOgjAQLKQcNDF+yQPvEX2cHsSziYl/0p0yBVroVqJHJllr25nZLN2iZhFO7cs0tydnv6GuD4WElag4
-        FuZ8f7sYYZaXA0UbiS3HThQlSPI0CKmU2EnsOZbcChKovBSyIibI8ghZHyrChOS0yCVokeArcwk7nuAZ
-        6uWKuW2uSJAzR4Xwq/wCTh8HpYpgbo8XX4Fmjn349RWgxZBRFcGcFeTMUeHQVfIl2b+y3otgjsfErQBj
-        HsfwgPk1gKwHImfONh0j5mHOLQGuP9svjO5A/WPpzZfw3GsFH4EA8QfzLh4sY4BarhcKVF4KWRETZHmE
-        rK83eQqsc3+9yQNiHubcSmNWxDYlxWGWl4OQfFeFv7VRgiRPA0U4k+m/hO614q6/yuthzAepT3fQ9d6R
-        gwAAAABJRU5ErkJggg==
-</value>
-  </data>
   <metadata name="nHANVIENBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 53</value>
   </metadata>

@@ -93,6 +93,12 @@
     <Compile Include="fNhapXuat.Designer.cs">
       <DependentUpon>fNhapXuat.cs</DependentUpon>
     </Compile>
+    <Compile Include="fThemSuaNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThemSuaNV.Designer.cs">
+      <DependentUpon>fThemSuaNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="fTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +181,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="ModelEF\EFModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -205,6 +212,14 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\Anh\67-16.png" />
+    <None Include="bin\Debug\Anh\67-20.png" />
+    <None Include="bin\Debug\Anh\app-10-magnifying-glass-64.png" />
+    <None Include="bin\Debug\Anh\Business_Engineering-24.png" />
+    <None Include="bin\Debug\Anh\Plus_icon-24.png" />
+    <None Include="bin\Debug\Anh\search-01-20.png" />
+    <None Include="bin\Debug\Anh\trash-24.png" />
+    <None Include="bin\Debug\Anh\trash-128.png" />
     <Content Include="ModelEF\EFModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>EFModel.edmx</DependentUpon>
@@ -215,7 +230,6 @@
       <DependentUpon>EFModel.edmx</DependentUpon>
       <LastGenOutput>EFModel.cs</LastGenOutput>
     </Content>
-    <Content Include="Picture\app-10-magnifying-glass-64.png" />
     <Content Include="SQL\quanlykho.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
