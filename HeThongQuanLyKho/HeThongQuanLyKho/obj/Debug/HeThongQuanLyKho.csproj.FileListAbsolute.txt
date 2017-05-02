@@ -18,3 +18,4 @@ C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeTho
 C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.fDoiMatKhau.resources
 C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.fNhapXuat.resources
 C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.fThongTinTaiKhoan.resources
+C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.fThemSuaNV.resources

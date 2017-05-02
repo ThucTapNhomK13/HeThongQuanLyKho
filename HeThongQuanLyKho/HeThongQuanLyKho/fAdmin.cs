@@ -80,8 +80,6 @@ namespace HeThongQuanLyKho
             LoadNhanVien();
         }
 
-        
-
         private void btnThemDV_Click(object sender, EventArgs e)
         {
             using (QLKEntities db = new QLKEntities())
@@ -337,14 +335,14 @@ namespace HeThongQuanLyKho
         {
             using (QLKEntities db = new QLKEntities())
             {
-                if (string.IsNullOrEmpty(txtTKNCC.Text) || txtTKNCC.Text == " ")
-                    LoadNhaCungCap();
+                if (string.IsNullOrEmpty(txtTKNV.Text) || txtTKNCC.Text == " ")
+                    LoadNhanVien();
                 else
                 {
-                    var lsNCC = db.NHACUNGCAPs.Where(x => x.tenNCC == txtTKNCC.Text || x.sodienthoai == txtTKNCC.Text || x.diachi == txtTKNCC.Text).ToList();
-                    LoadNhaCungCap(lsNCC);
+                    var lsNCC = db.NHANVIENs.Where(x => x.hoten == txtTKNCC.Text).ToList();
+                    LoadNhanVien(lsNCC);
                 }
-                
+
             }
         }
 
@@ -366,22 +364,61 @@ namespace HeThongQuanLyKho
 
         private void tilThemNV_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            using (fThemSuaNV frmThem = new fThemSuaNV())
+            using (QLKEntities db = new QLKEntities())
             {
-                frmThem.ShowDialog();
+                using (fThemSuaNV frmThem = new fThemSuaNV())
+                {
+                    frmThem.ShowDialog();
+                    db.NHANVIENs.Add(frmThem.NhanVienInfo);
+                    db.SaveChanges();
+                }
             }
-            this.Show();
+            
         }
 
         private void tilSuaNV_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            using (fThemSuaNV frmSua = new fThemSuaNV())
+            var nv = nHANVIENBindingSource1.Current as NHANVIEN;
+            if (nv != null)
+                using (QLKEntities db = new QLKEntities())
+                {
+                    using (fThemSuaNV frmSua = new fThemSuaNV(nv))
+                    {
+                        frmSua.ShowDialog();
+                        NHANVIEN NV = frmSua.NhanVienInfo;
+                        nv.hoten = NV.hoten;
+                        nv.ngaysinh = NV.ngaysinh;
+                        nv.madonvi = NV.madonvi;
+                        nv.chuvu = NV.chuvu;
+
+                        db.NHANVIENs.Attach(nv);
+                        db.Entry(nv).State = EntityState.Modified;
+                        db.SaveChanges();
+                    }
+                }
+            else
+                MessageBox.Show("Test");
+            
+        }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
+            LoadNhanVien();
+        }
+
+        private void btnTKNCC_Click(object sender, EventArgs e)
+        {
+            using (QLKEntities db = new QLKEntities())
             {
-                frmSua.ShowDialog();
+                if (string.IsNullOrEmpty(txtTKNCC.Text) || txtTKNCC.Text == " ")
+                    LoadNhaCungCap();
+                else
+                {
+                    var lsNCC = db.NHACUNGCAPs.Where(x => x.tenNCC == txtTKNCC.Text || x.sodienthoai == txtTKNCC.Text || x.diachi == txtTKNCC.Text).ToList();
+                    LoadNhaCungCap(lsNCC);
+                }
+
             }
-            this.Show();
         }
     }
 }
