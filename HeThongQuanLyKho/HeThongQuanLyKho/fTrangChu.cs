@@ -10,19 +10,24 @@ using System.Windows.Forms;
 
 namespace HeThongQuanLyKho
 {
-    public partial class frmMain : MetroFramework.Forms.MetroForm
+    public partial class fTrangChu : MetroFramework.Forms.MetroForm
     {
-        public frmMain()
+        public delegate void ClickHandle();
+        public event ClickHandle SuKien;
+
+        public void KichHoat()
+        {
+            if (SuKien != null)
+                SuKien();
+        }
+
+        public fTrangChu(string text)
         {
             InitializeComponent();
+            lblTenDangNhap.Text = text;
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TUser_Click(object sender, EventArgs e)
         {
 
         }
@@ -34,38 +39,28 @@ namespace HeThongQuanLyKho
             frmAd.ShowDialog();
             this.Show();
         }
-
-        private void TLogin_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TLogout_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TSupplier_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TGroup_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TImport_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void TExport_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            using (fHangHoa frmHH = new fHangHoa())
+            {
+                frmHH.ShowDialog();
+            }
+            this.Show();
         }
 
         private void TGoods_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLink1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void THelp_Click(object sender, EventArgs e)
         {
 
         }

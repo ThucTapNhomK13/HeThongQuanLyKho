@@ -103,6 +103,26 @@ namespace HeThongQuanLyKho.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_402_128 {
+            get {
+                object obj = ResourceManager.GetObject("icon_402-128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_403_64 {
+            get {
+                object obj = ResourceManager.GetObject("icon_403-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Plus_icon_24 {
             get {
                 object obj = ResourceManager.GetObject("Plus_icon-24", resourceCulture);
@@ -136,6 +156,26 @@ namespace HeThongQuanLyKho.Properties {
         internal static System.Drawing.Bitmap trash_24 {
             get {
                 object obj = ResourceManager.GetObject("trash-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_128 {
+            get {
+                object obj = ResourceManager.GetObject("user-128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_64 {
+            get {
+                object obj = ResourceManager.GetObject("user-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

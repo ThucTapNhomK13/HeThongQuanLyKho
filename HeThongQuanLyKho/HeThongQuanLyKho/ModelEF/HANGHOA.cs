@@ -27,6 +27,7 @@ namespace HeThongQuanLyKho.ModelEF
         public string donvitinh { get; set; }
         public Nullable<int> thoigianbaohanh { get; set; }
         public Nullable<int> manhom { get; set; }
+        public Nullable<int> soluong { get; set; }
     
         public virtual NHOMHANG NHOMHANG { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -22,6 +22,7 @@
     <EntitySetMapping Name="HANGHOAs">
       <EntityTypeMapping TypeName="QuanLyKhoModel.HANGHOA">
         <MappingFragment StoreEntitySet="HANGHOA">
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
           <ScalarProperty Name="ma" ColumnName="ma" />
           <ScalarProperty Name="tenhang" ColumnName="tenhang" />
           <ScalarProperty Name="mota" ColumnName="mota" />

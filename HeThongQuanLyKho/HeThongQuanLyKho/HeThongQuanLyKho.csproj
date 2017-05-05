@@ -81,11 +81,11 @@
     <Compile Include="fDangNhap.Designer.cs">
       <DependentUpon>fDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="fDoiMatKhau.cs">
+    <Compile Include="fHangHoa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fDoiMatKhau.Designer.cs">
-      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
+    <Compile Include="fHangHoa.Designer.cs">
+      <DependentUpon>fHangHoa.cs</DependentUpon>
     </Compile>
     <Compile Include="fNhapXuat.cs">
       <SubType>Form</SubType>
@@ -104,12 +104,6 @@
     </Compile>
     <Compile Include="fTrangChu.Designer.cs">
       <DependentUpon>fTrangChu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="fThongTinTaiKhoan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fThongTinTaiKhoan.Designer.cs">
-      <DependentUpon>fThongTinTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="ModelEF\ADMIN.cs">
       <DependentUpon>EFModel.tt</DependentUpon>
@@ -161,17 +155,17 @@
     <EmbeddedResource Include="fAdmin.resx">
       <DependentUpon>fAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fDoiMatKhau.resx">
-      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
+    <EmbeddedResource Include="fDangNhap.resx">
+      <DependentUpon>fDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHangHoa.resx">
+      <DependentUpon>fHangHoa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fNhapXuat.resx">
       <DependentUpon>fNhapXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fThemSuaNV.resx">
       <DependentUpon>fThemSuaNV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fThongTinTaiKhoan.resx">
-      <DependentUpon>fThongTinTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fTrangChu.resx">
       <DependentUpon>fTrangChu.cs</DependentUpon>
@@ -195,6 +189,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\HeThongQuanLyKho.ModelEF.DONVI.datasource" />
+    <None Include="Properties\DataSources\HeThongQuanLyKho.ModelEF.HANGHOA.datasource" />
     <None Include="Properties\DataSources\HeThongQuanLyKho.ModelEF.NHACUNGCAP.datasource" />
     <None Include="Properties\DataSources\HeThongQuanLyKho.ModelEF.NHANVIEN.datasource" />
     <None Include="Properties\DataSources\HeThongQuanLyKho.ModelEF.NHOMHANG.datasource" />
@@ -223,6 +218,10 @@
     <None Include="bin\Debug\Anh\search-01-20.png" />
     <None Include="bin\Debug\Anh\trash-24.png" />
     <None Include="bin\Debug\Anh\trash-128.png" />
+    <None Include="bin\Debug\Anh\user-64.png" />
+    <None Include="bin\Debug\Anh\user-128.png" />
+    <None Include="bin\Debug\Anh\icon_403-64.png" />
+    <None Include="bin\Debug\Anh\icon_402-128.png" />
     <Content Include="ModelEF\EFModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>EFModel.edmx</DependentUpon>

@@ -30,6 +30,7 @@
     <NavigationProperty Name="NHOMHANG" Relationship="Self.fk_hanghoa_nhomhang" FromRole="HANGHOA" ToRole="NHOMHANG" />
     <NavigationProperty Name="HANGNHAPs" Relationship="Self.fk_hangnhap" FromRole="HANGHOA" ToRole="HANGNHAP" />
     <NavigationProperty Name="HANGXUATs" Relationship="Self.fk_hangxuat_hanghoa" FromRole="HANGHOA" ToRole="HANGXUAT" />
+    <Property Name="soluong" Type="Int32" />
   </EntityType>
   <EntityType Name="HANGNHAP">
     <Key>

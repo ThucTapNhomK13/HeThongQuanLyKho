@@ -13,9 +13,9 @@ C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeTho
 C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.csproj.GenerateResource.Cache
 C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.exe
 C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.pdb
-C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.frmMain.resources
 C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.fAdmin.resources
-C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.fDoiMatKhau.resources
 C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.fNhapXuat.resources
-C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.fThongTinTaiKhoan.resources
 C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.fThemSuaNV.resources
+C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.fDangNhap.resources
+C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.fHangHoa.resources
+C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.fTrangChu.resources
