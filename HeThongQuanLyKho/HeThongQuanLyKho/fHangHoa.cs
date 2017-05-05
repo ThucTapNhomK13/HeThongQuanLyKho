@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using MetroFramework.Forms;
 using System.Data.Entity;
 using HeThongQuanLyKho.ModelEF;
+using MetroFramework;
 
 namespace HeThongQuanLyKho
 {
@@ -23,16 +24,22 @@ namespace HeThongQuanLyKho
 
         private void LoadNhomHang ()
         {
-            QLKEntities db = new QLKEntities();
+            QuanLyKhoEntities db = new QuanLyKhoEntities();
             cmbNhomHang.DataSource = db.NHOMHANGs.ToList();
             cmbNhomHang.DisplayMember = "tennhom";
             cmbNhomHang.ValueMember = "ma";
         }
 
-        private void LoadHangHoa ()
+        private void LoadHangHoa (List<HANGHOA> ls=null)
         {
-            QLKEntities db = new QLKEntities();
-            dgvDSHH.DataSource = db.HANGHOAs.ToList();
+            if (ls == null)
+            {
+                QuanLyKhoEntities db = new QuanLyKhoEntities();
+                hANGHOABindingSource1.DataSource = db.HANGHOAs.ToList();
+            }
+            else
+                hANGHOABindingSource1.DataSource = ls;
+            
         }
 
         private void lklQuayLaij_Click(object sender, EventArgs e)
@@ -51,9 +58,9 @@ namespace HeThongQuanLyKho
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            using (QLKEntities db = new QLKEntities())
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
             {
-                var hh = hANGHOABindingSource.Current as HANGHOA;
+                var hh = hANGHOABindingSource1.Current as HANGHOA;
                 var HH = db.HANGHOAs.SingleOrDefault(x => x.ma == hh.ma);
 
                 if (HH != null)
@@ -61,15 +68,22 @@ namespace HeThongQuanLyKho
                     db.HANGHOAs.Attach(HH);
                     db.HANGHOAs.Remove(HH);
                     db.SaveChanges();
+
+                    LoadHangHoa();
+                }
+                else
+                {
+                    MetroMessageBox.Show(this, "Lỗi");
+                    return;
                 }
             }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            using (QLKEntities db = new QLKEntities())
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
             {
-                var hh = hANGHOABindingSource.Current as HANGHOA;
+                var hh = hANGHOABindingSource1.Current as HANGHOA;
                 var HH = db.HANGHOAs.SingleOrDefault(x => x.ma == hh.ma);
                 if (HH != null)
                 {
@@ -82,32 +96,41 @@ namespace HeThongQuanLyKho
                     db.HANGHOAs.Attach(HH);
                     db.Entry(HH).State = EntityState.Modified;
                     db.SaveChanges();
+
+                    
                 }
                 else
                 {
 
                     return;
                 }
+                LoadHangHoa();
             }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            using (QLKEntities db = new QLKEntities())
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
             {
-                var hh = hANGHOABindingSource.Current as HANGHOA;
-                var HH = db.HANGHOAs.Where(x => x.tenhang == hh.tenhang).FirstOrDefault();
-                if (HH != null)
+                HANGHOA hh = hANGHOABindingSource1.Current as HANGHOA;
+                var HH = db.HANGHOAs.SingleOrDefault(x => x.tenhang == hh.tenhang);
+                if (HH == null)
                 {
                     db.HANGHOAs.Add(hh);
                     db.SaveChanges();
+
+                    
                 }
                 else
                 {
-
+                    MetroMessageBox.Show(this, "Sản phẩm đã tồn tại, bạn phải nhập sản phẩm khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtTenHang.Focus();
                     return;
                 }
-                  
+
+                LoadHangHoa();
+
+
             }
         }
 
@@ -115,6 +138,23 @@ namespace HeThongQuanLyKho
         {
             LoadNhomHang();
             LoadHangHoa();
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
+            {
+                if (string.IsNullOrEmpty(txtTimKiem.Text) || txtTimKiem.Text == " ")
+                {
+                    LoadHangHoa();
+                }
+                else
+                {
+                    var ls = db.HANGHOAs.Where(x => x.tenhang == txtTimKiem.Text || x.donvitinh == txtTimKiem.Text).ToList();
+                    LoadHangHoa(ls);
+                }
+            }
+                
         }
     }
 }

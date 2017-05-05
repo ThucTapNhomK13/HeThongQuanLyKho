@@ -18,8 +18,5 @@ namespace HeThongQuanLyKho.ModelEF
         public Nullable<int> Slxuat { get; set; }
         public Nullable<int> maHang { get; set; }
         public Nullable<int> maNV { get; set; }
-    
-        public virtual HANGHOA HANGHOA { get; set; }
-        public virtual NHANVIEN NHANVIEN { get; set; }
     }
 }

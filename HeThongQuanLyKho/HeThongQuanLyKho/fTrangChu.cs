@@ -21,6 +21,11 @@ namespace HeThongQuanLyKho
                 SuKien();
         }
 
+        public fTrangChu()
+        {
+            InitializeComponent();
+            
+        }
         public fTrangChu(string text)
         {
             InitializeComponent();
@@ -43,16 +48,21 @@ namespace HeThongQuanLyKho
         private void TExport_Click(object sender, EventArgs e)
         {
             this.Hide();
+            using (fNhapXuat frmNX = new fNhapXuat())
+            {
+                frmNX.ShowDialog();
+            }
+            this.Close();
+        }
+
+        private void TGoods_Click(object sender, EventArgs e)
+        {
+            this.Hide();
             using (fHangHoa frmHH = new fHangHoa())
             {
                 frmHH.ShowDialog();
             }
             this.Show();
-        }
-
-        private void TGoods_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void metroLink1_Click(object sender, EventArgs e)

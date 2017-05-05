@@ -8,7 +8,6 @@ C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeTho
 C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\bin\Debug\EntityFramework.xml
 C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.csprojResolveAssemblyReference.cache
 C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.Properties.Resources.resources
 C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.csproj.GenerateResource.Cache
 C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.exe

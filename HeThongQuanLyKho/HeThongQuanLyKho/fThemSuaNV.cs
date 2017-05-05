@@ -64,7 +64,7 @@ namespace HeThongQuanLyKho
         {
             cmbDonVi.DisplayMember = "chucnang";
             cmbDonVi.ValueMember = "ma";
-            using (QLKEntities db = new QLKEntities())
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
             {
                 cmbDonVi.DataSource = db.DONVIs.ToList();
             }

@@ -18,7 +18,5 @@ namespace HeThongQuanLyKho.ModelEF
         public Nullable<System.DateTime> ngayxuat { get; set; }
         public string lydoxuat { get; set; }
         public Nullable<int> maNV { get; set; }
-    
-        public virtual NHANVIEN NHANVIEN { get; set; }
     }
 }

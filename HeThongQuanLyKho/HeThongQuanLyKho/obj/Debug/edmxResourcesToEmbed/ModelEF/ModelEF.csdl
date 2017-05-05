@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyKhoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ADMIN">
+    <Key>
+      <PropertyRef Name="tendangnhap" />
+    </Key>
+    <Property Name="tendangnhap" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="matkhau" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="quanly" Type="Int32" />
+  </EntityType>
+  <EntityType Name="DONVI">
+    <Key>
+      <PropertyRef Name="ma" />
+    </Key>
+    <Property Name="ma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tendonvi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="chucnang" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HANGHOA">
+    <Key>
+      <PropertyRef Name="ma" />
+    </Key>
+    <Property Name="ma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tenhang" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="mota" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="donvitinh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="thoigianbaohanh" Type="Int32" />
+    <Property Name="manhom" Type="Int32" />
+    <Property Name="soluong" Type="Int32" />
+  </EntityType>
+  <EntityType Name="HANGNHAP">
+    <Key>
+      <PropertyRef Name="Spnhap" />
+    </Key>
+    <Property Name="Spnhap" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Slchungtu" Type="Int32" />
+    <Property Name="Slthucnhap" Type="Int32" />
+    <Property Name="Sphieubaohang" Type="Int32" />
+    <Property Name="maHang" Type="Int32" />
+  </EntityType>
+  <EntityType Name="HANGXUAT">
+    <Key>
+      <PropertyRef Name="Spxuat" />
+    </Key>
+    <Property Name="Spxuat" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Slxuat" Type="Int32" />
+    <Property Name="maHang" Type="Int32" />
+    <Property Name="maNV" Type="Int32" />
+  </EntityType>
+  <EntityType Name="NHACUNGCAP">
+    <Key>
+      <PropertyRef Name="ma" />
+    </Key>
+    <Property Name="ma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tenNCC" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="diachi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="sodienthoai" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NHANVIEN">
+    <Key>
+      <PropertyRef Name="ma" />
+    </Key>
+    <Property Name="ma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="hoten" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ngaysinh" Type="DateTime" Precision="3" />
+    <Property Name="gioitinh" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="chuvu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="madonvi" Type="Int32" />
+  </EntityType>
+  <EntityType Name="NHOMHANG">
+    <Key>
+      <PropertyRef Name="ma" />
+    </Key>
+    <Property Name="ma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tennhom" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="tacdung" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PHIEUNHAP">
+    <Key>
+      <PropertyRef Name="Spnhap" />
+    </Key>
+    <Property Name="Spnhap" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ngaynhap" Type="DateTime" Precision="3" />
+    <Property Name="lydonhap" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="maNCC" Type="Int32" />
+    <Property Name="maNV" Type="Int32" />
+  </EntityType>
+  <EntityType Name="PHIEUXUAT">
+    <Key>
+      <PropertyRef Name="Spxuat" />
+    </Key>
+    <Property Name="Spxuat" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ngayxuat" Type="DateTime" Precision="3" />
+    <Property Name="lydoxuat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="maNV" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="QuanLyKhoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ADMINs" EntityType="Self.ADMIN" />
+    <EntitySet Name="DONVIs" EntityType="Self.DONVI" />
+    <EntitySet Name="HANGHOAs" EntityType="Self.HANGHOA" />
+    <EntitySet Name="HANGNHAPs" EntityType="Self.HANGNHAP" />
+    <EntitySet Name="HANGXUATs" EntityType="Self.HANGXUAT" />
+    <EntitySet Name="NHACUNGCAPs" EntityType="Self.NHACUNGCAP" />
+    <EntitySet Name="NHANVIENs" EntityType="Self.NHANVIEN" />
+    <EntitySet Name="NHOMHANGs" EntityType="Self.NHOMHANG" />
+    <EntitySet Name="PHIEUNHAPs" EntityType="Self.PHIEUNHAP" />
+    <EntitySet Name="PHIEUXUATs" EntityType="Self.PHIEUXUAT" />
+  </EntityContainer>
+</Schema>

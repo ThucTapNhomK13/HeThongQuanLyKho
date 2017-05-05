@@ -76,7 +76,6 @@
             this.txtHoTen.MaxLength = 32767;
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.PasswordChar = '\0';
-            this.txtHoTen.PromptText = "Họ và tên";
             this.txtHoTen.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtHoTen.SelectedText = "";
             this.txtHoTen.SelectionLength = 0;
@@ -182,10 +181,6 @@
             this.tggChucVu.TabIndex = 12;
             this.tggChucVu.Text = "Off";
             this.tggChucVu.UseSelectable = true;
-            // 
-            // nHANVIENBindingSource
-            // 
-            this.nHANVIENBindingSource.DataSource = typeof(HeThongQuanLyKho.ModelEF.NHANVIEN);
             // 
             // fThemSuaNV
             // 

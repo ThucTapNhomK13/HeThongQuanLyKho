@@ -31,7 +31,7 @@ namespace HeThongQuanLyKho
 
             try
             {
-                using (QLKEntities db = new QLKEntities())
+                using (QuanLyKhoEntities db = new QuanLyKhoEntities())
                 {
                     var query = from c in db.ADMINs
                                 where c.tendangnhap == txtTenDangNhap.Text && c.matkhau == txtMatKhau.Text

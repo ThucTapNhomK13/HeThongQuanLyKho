@@ -24,28 +24,28 @@ namespace HeThongQuanLyKho
             InitializeComponent();
         }
 
-        private void LoadDonVi (List<DONVI> ls=null)
+        private void LoadDonVi(List<DONVI> ls = null)
         {
             if (ls != null)
-                dONVIBindingSource.DataSource = ls;
+                dONVIBindingSource1.DataSource = ls;
             else
-                using (QLKEntities db = new QLKEntities())
+                using (QuanLyKhoEntities db = new QuanLyKhoEntities())
                 {
-                    dONVIBindingSource.DataSource = db.DONVIs.ToList();
+                    dONVIBindingSource1.DataSource = db.DONVIs.ToList();
                 }
         }
-        private void LoadNhaCungCap (List<NHACUNGCAP> ls=null)
+        private void LoadNhaCungCap(List<NHACUNGCAP> ls = null)
         {
             if (ls != null)
                 nHACUNGCAPBindingSource1.DataSource = ls;
             else
-                using (QLKEntities db = new QLKEntities() )
+                using (QuanLyKhoEntities db = new QuanLyKhoEntities())
                 {
                     nHACUNGCAPBindingSource1.DataSource = db.NHACUNGCAPs.ToList();
-                } 
+                }
         }
 
-        private void LoadNhomHang (List<NHOMHANG> ls=null)
+        private void LoadNhomHang(List<NHOMHANG> ls = null)
         {
             if (ls != null)
             {
@@ -53,13 +53,13 @@ namespace HeThongQuanLyKho
                 return;
             }
             else
-                using (QLKEntities db = new QLKEntities())
+                using (QuanLyKhoEntities db = new QuanLyKhoEntities())
                 {
                     nHOMHANGBindingSource.DataSource = db.NHOMHANGs.ToList();
                 }
         }
 
-        private void LoadNhanVien (List<NHANVIEN> ls =null)
+        private void LoadNhanVien(List<NHANVIEN> ls = null)
         {
             if (ls != null)
             {
@@ -67,7 +67,7 @@ namespace HeThongQuanLyKho
                 return;
             }
             else
-                using (QLKEntities db = new QLKEntities())
+                using (QuanLyKhoEntities db = new QuanLyKhoEntities())
                 {
                     nHANVIENBindingSource1.DataSource = db.NHANVIENs.ToList();
                 }
@@ -82,9 +82,9 @@ namespace HeThongQuanLyKho
 
         private void btnThemDV_Click(object sender, EventArgs e)
         {
-            using (QLKEntities db = new QLKEntities())
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
             {
-                DONVI dv = dONVIBindingSource.Current as DONVI;
+                DONVI dv = dONVIBindingSource1.Current as DONVI;
                 var DVd = db.DONVIs.Where(x => x.tendonvi == dv.tendonvi).FirstOrDefault<DONVI>();
 
                 if (DVd == null)
@@ -127,22 +127,22 @@ namespace HeThongQuanLyKho
             txtChucNangDonVi.Clear();
         }
 
-        private bool SearchNhomHangById (int id)
+        private bool SearchNhomHangById(int id)
         {
-            using (QLKEntities db = new QLKEntities())
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
             {
                 var nh = db.NHOMHANGs.SingleOrDefault(x => x.ma == id);
                 if (nh != null)
                     return true;
             }
 
-                return false;
+            return false;
         }
         private void btnXoaDonVi_Click(object sender, EventArgs e)
         {
-            using (QLKEntities db = new QLKEntities())
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
             {
-                DONVI dv = dONVIBindingSource.Current as DONVI;
+                DONVI dv = dONVIBindingSource1.Current as DONVI;
                 var DVd = db.DONVIs.Where(x => x.ma == dv.ma).SingleOrDefault();
                 if (DVd != null)
                 {
@@ -162,9 +162,9 @@ namespace HeThongQuanLyKho
 
         private void btnSuaDonVi_Click(object sender, EventArgs e)
         {
-            using (QLKEntities db = new QLKEntities())
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
             {
-                var dv = dONVIBindingSource.Current as DONVI;
+                var dv = dONVIBindingSource1.Current as DONVI;
                 var Dvd = db.DONVIs.SingleOrDefault(x => x.ma == dv.ma);
 
                 if (Dvd != null)
@@ -177,48 +177,61 @@ namespace HeThongQuanLyKho
                     db.SaveChanges();
                     LoadDonVi();
                 }
-                
-                
+
+
             }
         }
 
         private void btnThemNhomHang_Click(object sender, EventArgs e)
         {
-            using (QLKEntities db = new QLKEntities())
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
             {
                 var nh = nHOMHANGBindingSource.Current as NHOMHANG;
-                db.NHOMHANGs.Add(nh);
-                db.SaveChanges();
+                var NH = db.NHOMHANGs.SingleOrDefault(x => x.tennhom == nh.tennhom);
 
-                LoadNhomHang();
+                if (NH == null)
+                {
+                    db.NHOMHANGs.Add(nh);
+                    db.SaveChanges();
+
+                    LoadNhomHang();
+                }
+                else
+                {
+                    MetroMessageBox.Show(this, "Nhóm hàng đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                
             }
         }
 
         private void btnXoaNhomHang_Click(object sender, EventArgs e)
         {
-            using (QLKEntities db = new QLKEntities())
-            {
-                var nh = nHOMHANGBindingSource.Current as NHOMHANG;
-                var NH = db.NHOMHANGs.SingleOrDefault(x => x.ma == nh.ma);
-                if (NH != null)
+            if (MetroMessageBox.Show(this, "Bạn có muốn xóa?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                using (QuanLyKhoEntities db = new QuanLyKhoEntities())
                 {
-                    db.NHOMHANGs.Attach(NH);
-                    db.NHOMHANGs.Remove(NH);
-                    db.SaveChanges();
-                    LoadNhomHang();
-                    MetroMessageBox.Show(this, "Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    var nh = nHOMHANGBindingSource.Current as NHOMHANG;
+                    var NH = db.NHOMHANGs.SingleOrDefault(x => x.ma == nh.ma);
+                    if (NH != null)
+                    {
+                        db.NHOMHANGs.Attach(NH);
+                        db.NHOMHANGs.Remove(NH);
+                        db.SaveChanges();
+                        LoadNhomHang();
+                        MetroMessageBox.Show(this, "Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                    }
+                    else
+                    {
+                        return;
+                    }
                 }
-                else
-                {
-                    return;
-                }
-            }
+            return;
         }
 
         private void btnSuaNhomHang_Click(object sender, EventArgs e)
         {
-            using (QLKEntities db = new QLKEntities())
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
             {
                 var nh = nHOMHANGBindingSource.Current as NHOMHANG;
                 var NH = db.NHOMHANGs.SingleOrDefault(x => x.ma == nh.ma);
@@ -242,7 +255,7 @@ namespace HeThongQuanLyKho
 
         private void btnTKNhomHang_Click(object sender, EventArgs e)
         {
-            using (QLKEntities db = new QLKEntities())
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
             {
                 if (string.IsNullOrEmpty(txtTKNhomHang.Text) || txtTKNhomHang.Text == " ")
                 {
@@ -253,14 +266,14 @@ namespace HeThongQuanLyKho
                     var nh = db.NHOMHANGs.Where(x => x.tennhom == txtTKNhomHang.Text || x.tacdung == txtTKNhomHang.Text).ToList();
                     LoadNhomHang(nh);
                 }
-                
+
 
             }
         }
 
         private void btnXoaNCC_Click(object sender, EventArgs e)
         {
-            using (QLKEntities db = new QLKEntities())
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
             {
                 var ncc = nHACUNGCAPBindingSource1.Current as NHACUNGCAP;
                 var NCC = db.NHACUNGCAPs.SingleOrDefault(x => x.ma == ncc.ma);
@@ -282,7 +295,7 @@ namespace HeThongQuanLyKho
 
         private void btnSuaNCC_Click(object sender, EventArgs e)
         {
-            using (QLKEntities db = new QLKEntities())
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
             {
                 var ncc = nHACUNGCAPBindingSource1.Current as NHACUNGCAP;
                 var NCC = db.NHACUNGCAPs.SingleOrDefault(x => x.ma == ncc.ma);
@@ -307,7 +320,7 @@ namespace HeThongQuanLyKho
 
         private void btnThemNCC_Click(object sender, EventArgs e)
         {
-            using (QLKEntities db = new QLKEntities())
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
             {
                 var ncc = nHACUNGCAPBindingSource1.Current as NHACUNGCAP;
                 var NCC = db.NHACUNGCAPs.SingleOrDefault(x => x.tenNCC == ncc.tenNCC);
@@ -333,13 +346,13 @@ namespace HeThongQuanLyKho
 
         private void btnTKNV_Click(object sender, EventArgs e)
         {
-            using (QLKEntities db = new QLKEntities())
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
             {
-                if (string.IsNullOrEmpty(txtTKNV.Text) || txtTKNCC.Text == " ")
+                if (string.IsNullOrEmpty(txtTKNV.Text) || txtTKNV.Text == " ")
                     LoadNhanVien();
                 else
                 {
-                    var lsNCC = db.NHANVIENs.Where(x => x.hoten == txtTKNCC.Text).ToList();
+                    var lsNCC = db.NHANVIENs.Where(x => x.hoten == txtTKNV.Text || x.gioitinh == txtTKNV.Text).ToList();
                     LoadNhanVien(lsNCC);
                 }
 
@@ -348,7 +361,7 @@ namespace HeThongQuanLyKho
 
         private void tilXoaNV_Click(object sender, EventArgs e)
         {
-            using (QLKEntities db = new QLKEntities())
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
             {
                 var nv = nHANVIENBindingSource1.Current as NHANVIEN;
                 var NV = db.NHANVIENs.SingleOrDefault(x => x.ma == nv.ma);
@@ -364,7 +377,7 @@ namespace HeThongQuanLyKho
 
         private void tilThemNV_Click(object sender, EventArgs e)
         {
-            using (QLKEntities db = new QLKEntities())
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
             {
                 using (fThemSuaNV frmThem = new fThemSuaNV())
                 {
@@ -373,14 +386,14 @@ namespace HeThongQuanLyKho
                     db.SaveChanges();
                 }
             }
-            
+
         }
 
         private void tilSuaNV_Click(object sender, EventArgs e)
         {
             var nv = nHANVIENBindingSource1.Current as NHANVIEN;
             if (nv != null)
-                using (QLKEntities db = new QLKEntities())
+                using (QuanLyKhoEntities db = new QuanLyKhoEntities())
                 {
                     using (fThemSuaNV frmSua = new fThemSuaNV(nv))
                     {
@@ -398,7 +411,7 @@ namespace HeThongQuanLyKho
                 }
             else
                 MessageBox.Show("Test");
-            
+
         }
 
         private void metroTile1_Click(object sender, EventArgs e)
@@ -408,7 +421,7 @@ namespace HeThongQuanLyKho
 
         private void btnTKNCC_Click(object sender, EventArgs e)
         {
-            using (QLKEntities db = new QLKEntities())
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
             {
                 if (string.IsNullOrEmpty(txtTKNCC.Text) || txtTKNCC.Text == " ")
                     LoadNhaCungCap();
@@ -418,6 +431,20 @@ namespace HeThongQuanLyKho
                     LoadNhaCungCap(lsNCC);
                 }
 
+            }
+        }
+
+        private void btnTKDonVi_Click(object sender, EventArgs e)
+        {
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
+            {
+                if (string.IsNullOrEmpty(txtTKDonVi.Text) || txtTKDonVi.Text == " ")
+                    LoadDonVi();
+                else
+                {
+                    var lsDV = db.DONVIs.Where(x => x.tendonvi == txtTKDonVi.Text || x.chucnang == txtTKDonVi.Text).ToList();
+                    LoadDonVi(lsDV);
+                }
             }
         }
     }

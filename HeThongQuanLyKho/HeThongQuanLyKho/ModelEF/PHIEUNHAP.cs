@@ -19,8 +19,5 @@ namespace HeThongQuanLyKho.ModelEF
         public string lydonhap { get; set; }
         public Nullable<int> maNCC { get; set; }
         public Nullable<int> maNV { get; set; }
-    
-        public virtual NHACUNGCAP NHACUNGCAP { get; set; }
-        public virtual NHANVIEN NHANVIEN { get; set; }
     }
 }

@@ -106,49 +106,49 @@
       <DependentUpon>fTrangChu.cs</DependentUpon>
     </Compile>
     <Compile Include="ModelEF\ADMIN.cs">
-      <DependentUpon>EFModel.tt</DependentUpon>
+      <DependentUpon>ModelEF.tt</DependentUpon>
     </Compile>
     <Compile Include="ModelEF\DONVI.cs">
-      <DependentUpon>EFModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelEF\EFModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EFModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelEF\EFModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EFModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelEF\EFModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EFModel.edmx</DependentUpon>
+      <DependentUpon>ModelEF.tt</DependentUpon>
     </Compile>
     <Compile Include="ModelEF\HANGHOA.cs">
-      <DependentUpon>EFModel.tt</DependentUpon>
+      <DependentUpon>ModelEF.tt</DependentUpon>
     </Compile>
     <Compile Include="ModelEF\HANGNHAP.cs">
-      <DependentUpon>EFModel.tt</DependentUpon>
+      <DependentUpon>ModelEF.tt</DependentUpon>
     </Compile>
     <Compile Include="ModelEF\HANGXUAT.cs">
-      <DependentUpon>EFModel.tt</DependentUpon>
+      <DependentUpon>ModelEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEF\ModelEF.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelEF.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEF\ModelEF.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEF\ModelEF.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelEF.edmx</DependentUpon>
     </Compile>
     <Compile Include="ModelEF\NHACUNGCAP.cs">
-      <DependentUpon>EFModel.tt</DependentUpon>
+      <DependentUpon>ModelEF.tt</DependentUpon>
     </Compile>
     <Compile Include="ModelEF\NHANVIEN.cs">
-      <DependentUpon>EFModel.tt</DependentUpon>
+      <DependentUpon>ModelEF.tt</DependentUpon>
     </Compile>
     <Compile Include="ModelEF\NHOMHANG.cs">
-      <DependentUpon>EFModel.tt</DependentUpon>
+      <DependentUpon>ModelEF.tt</DependentUpon>
     </Compile>
     <Compile Include="ModelEF\PHIEUNHAP.cs">
-      <DependentUpon>EFModel.tt</DependentUpon>
+      <DependentUpon>ModelEF.tt</DependentUpon>
     </Compile>
     <Compile Include="ModelEF\PHIEUXUAT.cs">
-      <DependentUpon>EFModel.tt</DependentUpon>
+      <DependentUpon>ModelEF.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -180,19 +180,23 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="ModelEF\EFModel.edmx">
+    <EntityDeploy Include="ModelEF\ModelEF.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EFModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelEF.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ModelEF\EFModel.edmx.diagram">
-      <DependentUpon>EFModel.edmx</DependentUpon>
+    <None Include="ModelEF\ModelEF.edmx.diagram">
+      <DependentUpon>ModelEF.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\HeThongQuanLyKho.ModelEF.DONVI.datasource" />
     <None Include="Properties\DataSources\HeThongQuanLyKho.ModelEF.HANGHOA.datasource" />
+    <None Include="Properties\DataSources\HeThongQuanLyKho.ModelEF.HANGNHAP.datasource" />
+    <None Include="Properties\DataSources\HeThongQuanLyKho.ModelEF.HANGXUAT.datasource" />
     <None Include="Properties\DataSources\HeThongQuanLyKho.ModelEF.NHACUNGCAP.datasource" />
     <None Include="Properties\DataSources\HeThongQuanLyKho.ModelEF.NHANVIEN.datasource" />
     <None Include="Properties\DataSources\HeThongQuanLyKho.ModelEF.NHOMHANG.datasource" />
+    <None Include="Properties\DataSources\HeThongQuanLyKho.ModelEF.PHIEUNHAP.datasource" />
+    <None Include="Properties\DataSources\HeThongQuanLyKho.ModelEF.PHIEUXUAT.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -222,15 +226,15 @@
     <None Include="bin\Debug\Anh\user-128.png" />
     <None Include="bin\Debug\Anh\icon_403-64.png" />
     <None Include="bin\Debug\Anh\icon_402-128.png" />
-    <Content Include="ModelEF\EFModel.Context.tt">
+    <Content Include="ModelEF\ModelEF.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EFModel.edmx</DependentUpon>
-      <LastGenOutput>EFModel.Context.cs</LastGenOutput>
+      <DependentUpon>ModelEF.edmx</DependentUpon>
+      <LastGenOutput>ModelEF.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="ModelEF\EFModel.tt">
+    <Content Include="ModelEF\ModelEF.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EFModel.edmx</DependentUpon>
-      <LastGenOutput>EFModel.cs</LastGenOutput>
+      <DependentUpon>ModelEF.edmx</DependentUpon>
+      <LastGenOutput>ModelEF.cs</LastGenOutput>
     </Content>
     <Content Include="SQL\quanlykho.sql" />
   </ItemGroup>

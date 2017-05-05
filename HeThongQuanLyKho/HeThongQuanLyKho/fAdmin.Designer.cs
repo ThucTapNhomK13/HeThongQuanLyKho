@@ -41,6 +41,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.metroPanel8 = new MetroFramework.Controls.MetroPanel();
@@ -51,12 +54,6 @@
             this.tilSuaNV = new MetroFramework.Controls.MetroTile();
             this.tilThemNV = new MetroFramework.Controls.MetroTile();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.hotenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaysinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gioitinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chuvuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.madonviDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nHANVIENBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
             this.metroButton5 = new MetroFramework.Controls.MetroButton();
@@ -64,7 +61,6 @@
             this.btnSuaNCC = new MetroFramework.Controls.MetroButton();
             this.btnThemNCC = new MetroFramework.Controls.MetroButton();
             this.txtDiaChiNCC = new MetroFramework.Controls.MetroTextBox();
-            this.nHACUNGCAPBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.htmlLabel6 = new MetroFramework.Drawing.Html.HtmlLabel();
             this.txtSDTNCC = new MetroFramework.Controls.MetroTextBox();
             this.htmlLabel4 = new MetroFramework.Drawing.Html.HtmlLabel();
@@ -75,37 +71,26 @@
             this.txtTKNCC = new MetroFramework.Controls.MetroTextBox();
             this.btnTKNCC = new MetroFramework.Controls.MetroButton();
             this.dgvDSNCC = new MetroFramework.Controls.MetroGrid();
-            this.maDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenNCCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diachiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sodienthoaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pHIEUNHAPsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.txtTKDonVi = new MetroFramework.Controls.MetroTextBox();
+            this.btnTKDonVi = new MetroFramework.Controls.MetroButton();
+            this.metroGrid3 = new MetroFramework.Controls.MetroGrid();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.btnSuaDonVi = new MetroFramework.Controls.MetroButton();
             this.btnXoaDonVi = new MetroFramework.Controls.MetroButton();
             this.btnNhapLaiDV = new MetroFramework.Controls.MetroButton();
             this.btnThemDV = new MetroFramework.Controls.MetroButton();
             this.txtChucNangDonVi = new MetroFramework.Controls.MetroTextBox();
-            this.dONVIBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.htmlLabel3 = new MetroFramework.Drawing.Html.HtmlLabel();
             this.txtTenDonVi = new MetroFramework.Controls.MetroTextBox();
             this.htmlLabel2 = new MetroFramework.Drawing.Html.HtmlLabel();
             this.htmlLabel1 = new MetroFramework.Drawing.Html.HtmlLabel();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.dgvDSDV = new MetroFramework.Controls.MetroGrid();
-            this.maDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tendonviDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chucnangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nHANVIENsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
             this.metroPanel6 = new MetroFramework.Controls.MetroPanel();
             this.txtTKNhomHang = new MetroFramework.Controls.MetroTextBox();
             this.btnTKNhomHang = new MetroFramework.Controls.MetroButton();
             this.metroGrid2 = new MetroFramework.Controls.MetroGrid();
-            this.tennhomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tacdungDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nHOMHANGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
             this.btnNhapLaiNhomHang = new MetroFramework.Controls.MetroButton();
             this.btnXoaNhomHang = new MetroFramework.Controls.MetroButton();
@@ -116,27 +101,50 @@
             this.txtTacDung = new MetroFramework.Controls.MetroTextBox();
             this.htmlLabel7 = new MetroFramework.Drawing.Html.HtmlLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.dgvDSDV = new MetroFramework.Controls.MetroGrid();
+            this.maDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tendonviDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chucnangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hotenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaysinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioitinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chuvuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.madonviDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nHANVIENBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.nHACUNGCAPBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.maDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenNCCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diachiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sodienthoaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tendonviDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chucnangDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dONVIBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tennhomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tacdungDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nHOMHANGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nHANVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource1)).BeginInit();
             this.metroTabPage2.SuspendLayout();
             this.metroPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nHACUNGCAPBindingSource1)).BeginInit();
             this.metroPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNCC)).BeginInit();
             this.metroTabPage3.SuspendLayout();
-            this.metroPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dONVIBindingSource)).BeginInit();
             this.metroPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSDV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid3)).BeginInit();
+            this.metroPanel2.SuspendLayout();
             this.metroTabPage4.SuspendLayout();
             this.metroPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nHOMHANGBindingSource)).BeginInit();
             this.metroPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSDV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nHACUNGCAPBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dONVIBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nHOMHANGBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -242,6 +250,7 @@
             this.txtTKNV.SelectionLength = 0;
             this.txtTKNV.SelectionStart = 0;
             this.txtTKNV.ShortcutsEnabled = true;
+            this.txtTKNV.ShowClearButton = true;
             this.txtTKNV.Size = new System.Drawing.Size(253, 23);
             this.txtTKNV.TabIndex = 7;
             this.txtTKNV.UseCustomBackColor = true;
@@ -341,44 +350,6 @@
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metroGrid1.Size = new System.Drawing.Size(1051, 353);
             this.metroGrid1.TabIndex = 2;
-            // 
-            // hotenDataGridViewTextBoxColumn
-            // 
-            this.hotenDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.hotenDataGridViewTextBoxColumn.DataPropertyName = "hoten";
-            this.hotenDataGridViewTextBoxColumn.HeaderText = "Họ tên";
-            this.hotenDataGridViewTextBoxColumn.Name = "hotenDataGridViewTextBoxColumn";
-            // 
-            // ngaysinhDataGridViewTextBoxColumn
-            // 
-            this.ngaysinhDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ngaysinhDataGridViewTextBoxColumn.DataPropertyName = "ngaysinh";
-            this.ngaysinhDataGridViewTextBoxColumn.HeaderText = "Ngày sinh";
-            this.ngaysinhDataGridViewTextBoxColumn.Name = "ngaysinhDataGridViewTextBoxColumn";
-            // 
-            // gioitinhDataGridViewTextBoxColumn
-            // 
-            this.gioitinhDataGridViewTextBoxColumn.DataPropertyName = "gioitinh";
-            this.gioitinhDataGridViewTextBoxColumn.HeaderText = "Giới tính";
-            this.gioitinhDataGridViewTextBoxColumn.Name = "gioitinhDataGridViewTextBoxColumn";
-            // 
-            // chuvuDataGridViewTextBoxColumn
-            // 
-            this.chuvuDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.chuvuDataGridViewTextBoxColumn.DataPropertyName = "chuvu";
-            this.chuvuDataGridViewTextBoxColumn.HeaderText = "Chức vụ";
-            this.chuvuDataGridViewTextBoxColumn.Name = "chuvuDataGridViewTextBoxColumn";
-            // 
-            // madonviDataGridViewTextBoxColumn
-            // 
-            this.madonviDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.madonviDataGridViewTextBoxColumn.DataPropertyName = "madonvi";
-            this.madonviDataGridViewTextBoxColumn.HeaderText = "Mã đơn vị";
-            this.madonviDataGridViewTextBoxColumn.Name = "madonviDataGridViewTextBoxColumn";
-            // 
-            // nHANVIENBindingSource1
-            // 
-            this.nHANVIENBindingSource1.DataSource = typeof(HeThongQuanLyKho.ModelEF.NHANVIEN);
             // 
             // metroTabPage2
             // 
@@ -495,10 +466,6 @@
             this.txtDiaChiNCC.WaterMark = "Địa chỉ";
             this.txtDiaChiNCC.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtDiaChiNCC.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // nHACUNGCAPBindingSource1
-            // 
-            this.nHACUNGCAPBindingSource1.DataSource = typeof(HeThongQuanLyKho.ModelEF.NHACUNGCAP);
             // 
             // htmlLabel6
             // 
@@ -700,8 +667,7 @@
             this.maDataGridViewTextBoxColumn,
             this.tenNCCDataGridViewTextBoxColumn,
             this.diachiDataGridViewTextBoxColumn,
-            this.sodienthoaiDataGridViewTextBoxColumn,
-            this.pHIEUNHAPsDataGridViewTextBoxColumn});
+            this.sodienthoaiDataGridViewTextBoxColumn});
             this.dgvDSNCC.DataSource = this.nHACUNGCAPBindingSource1;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -732,50 +698,10 @@
             this.dgvDSNCC.Size = new System.Drawing.Size(630, 379);
             this.dgvDSNCC.TabIndex = 2;
             // 
-            // maDataGridViewTextBoxColumn
-            // 
-            this.maDataGridViewTextBoxColumn.DataPropertyName = "ma";
-            this.maDataGridViewTextBoxColumn.HeaderText = "ma";
-            this.maDataGridViewTextBoxColumn.Name = "maDataGridViewTextBoxColumn";
-            this.maDataGridViewTextBoxColumn.ReadOnly = true;
-            this.maDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // tenNCCDataGridViewTextBoxColumn
-            // 
-            this.tenNCCDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tenNCCDataGridViewTextBoxColumn.DataPropertyName = "tenNCC";
-            this.tenNCCDataGridViewTextBoxColumn.HeaderText = "Tên nhà cung cấp";
-            this.tenNCCDataGridViewTextBoxColumn.Name = "tenNCCDataGridViewTextBoxColumn";
-            this.tenNCCDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // diachiDataGridViewTextBoxColumn
-            // 
-            this.diachiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.diachiDataGridViewTextBoxColumn.DataPropertyName = "diachi";
-            this.diachiDataGridViewTextBoxColumn.HeaderText = "Địa chỉ";
-            this.diachiDataGridViewTextBoxColumn.Name = "diachiDataGridViewTextBoxColumn";
-            this.diachiDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sodienthoaiDataGridViewTextBoxColumn
-            // 
-            this.sodienthoaiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.sodienthoaiDataGridViewTextBoxColumn.DataPropertyName = "sodienthoai";
-            this.sodienthoaiDataGridViewTextBoxColumn.HeaderText = "Số điện thoại";
-            this.sodienthoaiDataGridViewTextBoxColumn.Name = "sodienthoaiDataGridViewTextBoxColumn";
-            this.sodienthoaiDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pHIEUNHAPsDataGridViewTextBoxColumn
-            // 
-            this.pHIEUNHAPsDataGridViewTextBoxColumn.DataPropertyName = "PHIEUNHAPs";
-            this.pHIEUNHAPsDataGridViewTextBoxColumn.HeaderText = "PHIEUNHAPs";
-            this.pHIEUNHAPsDataGridViewTextBoxColumn.Name = "pHIEUNHAPsDataGridViewTextBoxColumn";
-            this.pHIEUNHAPsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pHIEUNHAPsDataGridViewTextBoxColumn.Visible = false;
-            // 
             // metroTabPage3
             // 
-            this.metroTabPage3.Controls.Add(this.metroPanel2);
             this.metroTabPage3.Controls.Add(this.metroPanel1);
+            this.metroTabPage3.Controls.Add(this.metroPanel2);
             this.metroTabPage3.HorizontalScrollbarBarColor = true;
             this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.HorizontalScrollbarSize = 10;
@@ -787,6 +713,119 @@
             this.metroTabPage3.VerticalScrollbarBarColor = true;
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.VerticalScrollbarSize = 10;
+            // 
+            // metroPanel1
+            // 
+            this.metroPanel1.Controls.Add(this.txtTKDonVi);
+            this.metroPanel1.Controls.Add(this.btnTKDonVi);
+            this.metroPanel1.Controls.Add(this.metroGrid3);
+            this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(404, 0);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(647, 448);
+            this.metroPanel1.TabIndex = 4;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // txtTKDonVi
+            // 
+            // 
+            // 
+            // 
+            this.txtTKDonVi.CustomButton.Image = null;
+            this.txtTKDonVi.CustomButton.Location = new System.Drawing.Point(414, 1);
+            this.txtTKDonVi.CustomButton.Name = "";
+            this.txtTKDonVi.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtTKDonVi.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtTKDonVi.CustomButton.TabIndex = 1;
+            this.txtTKDonVi.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtTKDonVi.CustomButton.UseSelectable = true;
+            this.txtTKDonVi.CustomButton.Visible = false;
+            this.txtTKDonVi.Lines = new string[0];
+            this.txtTKDonVi.Location = new System.Drawing.Point(149, 28);
+            this.txtTKDonVi.MaxLength = 32767;
+            this.txtTKDonVi.Name = "txtTKDonVi";
+            this.txtTKDonVi.PasswordChar = '\0';
+            this.txtTKDonVi.PromptText = "Từ khóa";
+            this.txtTKDonVi.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtTKDonVi.SelectedText = "";
+            this.txtTKDonVi.SelectionLength = 0;
+            this.txtTKDonVi.SelectionStart = 0;
+            this.txtTKDonVi.ShortcutsEnabled = true;
+            this.txtTKDonVi.ShowClearButton = true;
+            this.txtTKDonVi.Size = new System.Drawing.Size(436, 23);
+            this.txtTKDonVi.TabIndex = 4;
+            this.txtTKDonVi.UseSelectable = true;
+            this.txtTKDonVi.WaterMark = "Từ khóa";
+            this.txtTKDonVi.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtTKDonVi.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // btnTKDonVi
+            // 
+            this.btnTKDonVi.Location = new System.Drawing.Point(48, 29);
+            this.btnTKDonVi.Name = "btnTKDonVi";
+            this.btnTKDonVi.Size = new System.Drawing.Size(75, 23);
+            this.btnTKDonVi.TabIndex = 3;
+            this.btnTKDonVi.Text = "Tìm kiếm";
+            this.btnTKDonVi.UseSelectable = true;
+            this.btnTKDonVi.Click += new System.EventHandler(this.btnTKDonVi_Click);
+            // 
+            // metroGrid3
+            // 
+            this.metroGrid3.AllowUserToAddRows = false;
+            this.metroGrid3.AllowUserToDeleteRows = false;
+            this.metroGrid3.AllowUserToResizeRows = false;
+            this.metroGrid3.AutoGenerateColumns = false;
+            this.metroGrid3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGrid3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.metroGrid3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.metroGrid3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.metroGrid3.ColumnHeadersHeight = 30;
+            this.metroGrid3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maDataGridViewTextBoxColumn2,
+            this.tendonviDataGridViewTextBoxColumn1,
+            this.chucnangDataGridViewTextBoxColumn1});
+            this.metroGrid3.DataSource = this.dONVIBindingSource1;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid3.DefaultCellStyle = dataGridViewCellStyle8;
+            this.metroGrid3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.metroGrid3.EnableHeadersVisualStyles = false;
+            this.metroGrid3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.metroGrid3.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGrid3.Location = new System.Drawing.Point(0, 78);
+            this.metroGrid3.Name = "metroGrid3";
+            this.metroGrid3.ReadOnly = true;
+            this.metroGrid3.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid3.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.metroGrid3.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.metroGrid3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.metroGrid3.Size = new System.Drawing.Size(647, 370);
+            this.metroGrid3.TabIndex = 2;
             // 
             // metroPanel2
             // 
@@ -801,13 +840,13 @@
             this.metroPanel2.Controls.Add(this.txtTenDonVi);
             this.metroPanel2.Controls.Add(this.htmlLabel2);
             this.metroPanel2.Controls.Add(this.htmlLabel1);
-            this.metroPanel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.metroPanel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(730, 0);
+            this.metroPanel2.Location = new System.Drawing.Point(0, 0);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(321, 448);
+            this.metroPanel2.Size = new System.Drawing.Size(398, 448);
             this.metroPanel2.TabIndex = 3;
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
@@ -867,7 +906,7 @@
             this.txtChucNangDonVi.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtChucNangDonVi.CustomButton.UseSelectable = true;
             this.txtChucNangDonVi.CustomButton.Visible = false;
-            this.txtChucNangDonVi.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dONVIBindingSource, "chucnang", true));
+            this.txtChucNangDonVi.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dONVIBindingSource1, "chucnang", true));
             this.txtChucNangDonVi.Lines = new string[0];
             this.txtChucNangDonVi.Location = new System.Drawing.Point(84, 141);
             this.txtChucNangDonVi.MaxLength = 32767;
@@ -885,10 +924,6 @@
             this.txtChucNangDonVi.WaterMark = "Chức năng";
             this.txtChucNangDonVi.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtChucNangDonVi.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // dONVIBindingSource
-            // 
-            this.dONVIBindingSource.DataSource = typeof(HeThongQuanLyKho.ModelEF.DONVI);
             // 
             // htmlLabel3
             // 
@@ -916,7 +951,7 @@
             this.txtTenDonVi.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtTenDonVi.CustomButton.UseSelectable = true;
             this.txtTenDonVi.CustomButton.Visible = false;
-            this.txtTenDonVi.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dONVIBindingSource, "tendonvi", true));
+            this.txtTenDonVi.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dONVIBindingSource1, "tendonvi", true));
             this.txtTenDonVi.Lines = new string[0];
             this.txtTenDonVi.Location = new System.Drawing.Point(84, 112);
             this.txtTenDonVi.MaxLength = 32767;
@@ -959,108 +994,6 @@
             this.htmlLabel1.Size = new System.Drawing.Size(127, 52);
             this.htmlLabel1.TabIndex = 2;
             this.htmlLabel1.Text = "Đơn vị";
-            // 
-            // metroPanel1
-            // 
-            this.metroPanel1.Controls.Add(this.dgvDSDV);
-            this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(0, 0);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(724, 448);
-            this.metroPanel1.TabIndex = 2;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
-            // 
-            // dgvDSDV
-            // 
-            this.dgvDSDV.AllowUserToAddRows = false;
-            this.dgvDSDV.AllowUserToDeleteRows = false;
-            this.dgvDSDV.AllowUserToResizeRows = false;
-            this.dgvDSDV.AutoGenerateColumns = false;
-            this.dgvDSDV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvDSDV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvDSDV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvDSDV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDSDV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvDSDV.ColumnHeadersHeight = 30;
-            this.dgvDSDV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.maDataGridViewTextBoxColumn1,
-            this.tendonviDataGridViewTextBoxColumn,
-            this.chucnangDataGridViewTextBoxColumn,
-            this.nHANVIENsDataGridViewTextBoxColumn});
-            this.dgvDSDV.DataSource = this.dONVIBindingSource;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDSDV.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvDSDV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDSDV.EnableHeadersVisualStyles = false;
-            this.dgvDSDV.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.dgvDSDV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvDSDV.Location = new System.Drawing.Point(0, 0);
-            this.dgvDSDV.Name = "dgvDSDV";
-            this.dgvDSDV.ReadOnly = true;
-            this.dgvDSDV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDSDV.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.dgvDSDV.RowHeadersWidth = 40;
-            this.dgvDSDV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvDSDV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDSDV.Size = new System.Drawing.Size(724, 448);
-            this.dgvDSDV.TabIndex = 2;
-            // 
-            // maDataGridViewTextBoxColumn1
-            // 
-            this.maDataGridViewTextBoxColumn1.DataPropertyName = "ma";
-            this.maDataGridViewTextBoxColumn1.HeaderText = "ma";
-            this.maDataGridViewTextBoxColumn1.Name = "maDataGridViewTextBoxColumn1";
-            this.maDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.maDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // tendonviDataGridViewTextBoxColumn
-            // 
-            this.tendonviDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tendonviDataGridViewTextBoxColumn.DataPropertyName = "tendonvi";
-            this.tendonviDataGridViewTextBoxColumn.HeaderText = "Tên đơn vị";
-            this.tendonviDataGridViewTextBoxColumn.Name = "tendonviDataGridViewTextBoxColumn";
-            this.tendonviDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // chucnangDataGridViewTextBoxColumn
-            // 
-            this.chucnangDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.chucnangDataGridViewTextBoxColumn.DataPropertyName = "chucnang";
-            this.chucnangDataGridViewTextBoxColumn.HeaderText = "Chức năng";
-            this.chucnangDataGridViewTextBoxColumn.Name = "chucnangDataGridViewTextBoxColumn";
-            this.chucnangDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nHANVIENsDataGridViewTextBoxColumn
-            // 
-            this.nHANVIENsDataGridViewTextBoxColumn.DataPropertyName = "NHANVIENs";
-            this.nHANVIENsDataGridViewTextBoxColumn.HeaderText = "NHANVIENs";
-            this.nHANVIENsDataGridViewTextBoxColumn.Name = "nHANVIENsDataGridViewTextBoxColumn";
-            this.nHANVIENsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nHANVIENsDataGridViewTextBoxColumn.Visible = false;
             // 
             // metroTabPage4
             // 
@@ -1192,25 +1125,6 @@
             this.metroGrid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metroGrid2.Size = new System.Drawing.Size(647, 376);
             this.metroGrid2.TabIndex = 2;
-            // 
-            // tennhomDataGridViewTextBoxColumn
-            // 
-            this.tennhomDataGridViewTextBoxColumn.DataPropertyName = "tennhom";
-            this.tennhomDataGridViewTextBoxColumn.HeaderText = "Tên nhóm";
-            this.tennhomDataGridViewTextBoxColumn.Name = "tennhomDataGridViewTextBoxColumn";
-            this.tennhomDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tacdungDataGridViewTextBoxColumn
-            // 
-            this.tacdungDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tacdungDataGridViewTextBoxColumn.DataPropertyName = "tacdung";
-            this.tacdungDataGridViewTextBoxColumn.HeaderText = "Tác dụng";
-            this.tacdungDataGridViewTextBoxColumn.Name = "tacdungDataGridViewTextBoxColumn";
-            this.tacdungDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nHOMHANGBindingSource
-            // 
-            this.nHOMHANGBindingSource.DataSource = typeof(HeThongQuanLyKho.ModelEF.NHOMHANG);
             // 
             // metroPanel5
             // 
@@ -1378,6 +1292,203 @@
             this.metroLabel3.TabIndex = 2;
             this.metroLabel3.Text = "Nhóm hàng";
             // 
+            // dgvDSDV
+            // 
+            this.dgvDSDV.AllowUserToAddRows = false;
+            this.dgvDSDV.AllowUserToDeleteRows = false;
+            this.dgvDSDV.AllowUserToResizeRows = false;
+            this.dgvDSDV.AutoGenerateColumns = false;
+            this.dgvDSDV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvDSDV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvDSDV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvDSDV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDSDV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            this.dgvDSDV.ColumnHeadersHeight = 30;
+            this.dgvDSDV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maDataGridViewTextBoxColumn1,
+            this.tendonviDataGridViewTextBoxColumn,
+            this.chucnangDataGridViewTextBoxColumn});
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDSDV.DefaultCellStyle = dataGridViewCellStyle14;
+            this.dgvDSDV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDSDV.EnableHeadersVisualStyles = false;
+            this.dgvDSDV.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dgvDSDV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvDSDV.Location = new System.Drawing.Point(0, 0);
+            this.dgvDSDV.Name = "dgvDSDV";
+            this.dgvDSDV.ReadOnly = true;
+            this.dgvDSDV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDSDV.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            this.dgvDSDV.RowHeadersWidth = 40;
+            this.dgvDSDV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvDSDV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDSDV.Size = new System.Drawing.Size(724, 448);
+            this.dgvDSDV.TabIndex = 2;
+            // 
+            // maDataGridViewTextBoxColumn1
+            // 
+            this.maDataGridViewTextBoxColumn1.DataPropertyName = "ma";
+            this.maDataGridViewTextBoxColumn1.HeaderText = "ma";
+            this.maDataGridViewTextBoxColumn1.Name = "maDataGridViewTextBoxColumn1";
+            this.maDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.maDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // tendonviDataGridViewTextBoxColumn
+            // 
+            this.tendonviDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tendonviDataGridViewTextBoxColumn.DataPropertyName = "tendonvi";
+            this.tendonviDataGridViewTextBoxColumn.HeaderText = "Tên đơn vị";
+            this.tendonviDataGridViewTextBoxColumn.Name = "tendonviDataGridViewTextBoxColumn";
+            this.tendonviDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // chucnangDataGridViewTextBoxColumn
+            // 
+            this.chucnangDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.chucnangDataGridViewTextBoxColumn.DataPropertyName = "chucnang";
+            this.chucnangDataGridViewTextBoxColumn.HeaderText = "Chức năng";
+            this.chucnangDataGridViewTextBoxColumn.Name = "chucnangDataGridViewTextBoxColumn";
+            this.chucnangDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hotenDataGridViewTextBoxColumn
+            // 
+            this.hotenDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.hotenDataGridViewTextBoxColumn.DataPropertyName = "hoten";
+            this.hotenDataGridViewTextBoxColumn.HeaderText = "Họ tên";
+            this.hotenDataGridViewTextBoxColumn.Name = "hotenDataGridViewTextBoxColumn";
+            // 
+            // ngaysinhDataGridViewTextBoxColumn
+            // 
+            this.ngaysinhDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ngaysinhDataGridViewTextBoxColumn.DataPropertyName = "ngaysinh";
+            this.ngaysinhDataGridViewTextBoxColumn.HeaderText = "Ngày sinh";
+            this.ngaysinhDataGridViewTextBoxColumn.Name = "ngaysinhDataGridViewTextBoxColumn";
+            // 
+            // gioitinhDataGridViewTextBoxColumn
+            // 
+            this.gioitinhDataGridViewTextBoxColumn.DataPropertyName = "gioitinh";
+            this.gioitinhDataGridViewTextBoxColumn.HeaderText = "Giới tính";
+            this.gioitinhDataGridViewTextBoxColumn.Name = "gioitinhDataGridViewTextBoxColumn";
+            // 
+            // chuvuDataGridViewTextBoxColumn
+            // 
+            this.chuvuDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.chuvuDataGridViewTextBoxColumn.DataPropertyName = "chuvu";
+            this.chuvuDataGridViewTextBoxColumn.HeaderText = "Chức vụ";
+            this.chuvuDataGridViewTextBoxColumn.Name = "chuvuDataGridViewTextBoxColumn";
+            // 
+            // madonviDataGridViewTextBoxColumn
+            // 
+            this.madonviDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.madonviDataGridViewTextBoxColumn.DataPropertyName = "madonvi";
+            this.madonviDataGridViewTextBoxColumn.HeaderText = "Mã đơn vị";
+            this.madonviDataGridViewTextBoxColumn.Name = "madonviDataGridViewTextBoxColumn";
+            // 
+            // nHANVIENBindingSource1
+            // 
+            this.nHANVIENBindingSource1.DataSource = typeof(HeThongQuanLyKho.ModelEF.NHANVIEN);
+            // 
+            // nHACUNGCAPBindingSource1
+            // 
+            this.nHACUNGCAPBindingSource1.DataSource = typeof(HeThongQuanLyKho.ModelEF.NHACUNGCAP);
+            // 
+            // maDataGridViewTextBoxColumn
+            // 
+            this.maDataGridViewTextBoxColumn.DataPropertyName = "ma";
+            this.maDataGridViewTextBoxColumn.HeaderText = "ma";
+            this.maDataGridViewTextBoxColumn.Name = "maDataGridViewTextBoxColumn";
+            this.maDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tenNCCDataGridViewTextBoxColumn
+            // 
+            this.tenNCCDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tenNCCDataGridViewTextBoxColumn.DataPropertyName = "tenNCC";
+            this.tenNCCDataGridViewTextBoxColumn.HeaderText = "Tên nhà cung cấp";
+            this.tenNCCDataGridViewTextBoxColumn.Name = "tenNCCDataGridViewTextBoxColumn";
+            this.tenNCCDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // diachiDataGridViewTextBoxColumn
+            // 
+            this.diachiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.diachiDataGridViewTextBoxColumn.DataPropertyName = "diachi";
+            this.diachiDataGridViewTextBoxColumn.HeaderText = "Địa chỉ";
+            this.diachiDataGridViewTextBoxColumn.Name = "diachiDataGridViewTextBoxColumn";
+            this.diachiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sodienthoaiDataGridViewTextBoxColumn
+            // 
+            this.sodienthoaiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sodienthoaiDataGridViewTextBoxColumn.DataPropertyName = "sodienthoai";
+            this.sodienthoaiDataGridViewTextBoxColumn.HeaderText = "Số điện thoại";
+            this.sodienthoaiDataGridViewTextBoxColumn.Name = "sodienthoaiDataGridViewTextBoxColumn";
+            this.sodienthoaiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // maDataGridViewTextBoxColumn2
+            // 
+            this.maDataGridViewTextBoxColumn2.DataPropertyName = "ma";
+            this.maDataGridViewTextBoxColumn2.HeaderText = "Mã";
+            this.maDataGridViewTextBoxColumn2.Name = "maDataGridViewTextBoxColumn2";
+            this.maDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // tendonviDataGridViewTextBoxColumn1
+            // 
+            this.tendonviDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tendonviDataGridViewTextBoxColumn1.DataPropertyName = "tendonvi";
+            this.tendonviDataGridViewTextBoxColumn1.HeaderText = "Tên đơn vị";
+            this.tendonviDataGridViewTextBoxColumn1.Name = "tendonviDataGridViewTextBoxColumn1";
+            this.tendonviDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // chucnangDataGridViewTextBoxColumn1
+            // 
+            this.chucnangDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.chucnangDataGridViewTextBoxColumn1.DataPropertyName = "chucnang";
+            this.chucnangDataGridViewTextBoxColumn1.HeaderText = "Chức năng";
+            this.chucnangDataGridViewTextBoxColumn1.Name = "chucnangDataGridViewTextBoxColumn1";
+            this.chucnangDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dONVIBindingSource1
+            // 
+            this.dONVIBindingSource1.DataSource = typeof(HeThongQuanLyKho.ModelEF.DONVI);
+            // 
+            // tennhomDataGridViewTextBoxColumn
+            // 
+            this.tennhomDataGridViewTextBoxColumn.DataPropertyName = "tennhom";
+            this.tennhomDataGridViewTextBoxColumn.HeaderText = "Tên nhóm";
+            this.tennhomDataGridViewTextBoxColumn.Name = "tennhomDataGridViewTextBoxColumn";
+            this.tennhomDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tacdungDataGridViewTextBoxColumn
+            // 
+            this.tacdungDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tacdungDataGridViewTextBoxColumn.DataPropertyName = "tacdung";
+            this.tacdungDataGridViewTextBoxColumn.HeaderText = "Tác dụng";
+            this.tacdungDataGridViewTextBoxColumn.Name = "tacdungDataGridViewTextBoxColumn";
+            this.tacdungDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nHOMHANGBindingSource
+            // 
+            this.nHOMHANGBindingSource.DataSource = typeof(HeThongQuanLyKho.ModelEF.NHOMHANG);
+            // 
             // nHANVIENBindingSource
             // 
             this.nHANVIENBindingSource.DataSource = typeof(HeThongQuanLyKho.ModelEF.NHANVIEN);
@@ -1395,24 +1506,25 @@
             this.metroTabPage1.ResumeLayout(false);
             this.metroPanel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource1)).EndInit();
             this.metroTabPage2.ResumeLayout(false);
             this.metroPanel4.ResumeLayout(false);
             this.metroPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nHACUNGCAPBindingSource1)).EndInit();
             this.metroPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNCC)).EndInit();
             this.metroTabPage3.ResumeLayout(false);
-            this.metroPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dONVIBindingSource)).EndInit();
             this.metroPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSDV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid3)).EndInit();
+            this.metroPanel2.ResumeLayout(false);
             this.metroTabPage4.ResumeLayout(false);
             this.metroPanel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nHOMHANGBindingSource)).EndInit();
             this.metroPanel5.ResumeLayout(false);
             this.metroPanel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSDV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nHACUNGCAPBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dONVIBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nHOMHANGBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -1431,7 +1543,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tenNCCDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn diachiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sodienthoaiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pHIEUNHAPsDataGridViewTextBoxColumn;
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private MetroFramework.Controls.MetroButton btnNhapLaiDV;
         private MetroFramework.Controls.MetroTextBox txtChucNangDonVi;
@@ -1439,14 +1550,11 @@
         private MetroFramework.Controls.MetroTextBox txtTenDonVi;
         private MetroFramework.Drawing.Html.HtmlLabel htmlLabel2;
         private MetroFramework.Drawing.Html.HtmlLabel htmlLabel1;
-        private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroButton btnThemDV;
-        private System.Windows.Forms.BindingSource dONVIBindingSource;
         private MetroFramework.Controls.MetroGrid dgvDSDV;
         private System.Windows.Forms.DataGridViewTextBoxColumn maDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn tendonviDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn chucnangDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nHANVIENsDataGridViewTextBoxColumn;
         private MetroFramework.Controls.MetroPanel metroPanel3;
         private MetroFramework.Controls.MetroPanel metroPanel4;
         private MetroFramework.Controls.MetroButton metroButton5;
@@ -1496,5 +1604,13 @@
         private MetroFramework.Controls.MetroButton btnSuaDonVi;
         private MetroFramework.Controls.MetroButton btnTKNV;
         private MetroFramework.Controls.MetroTile metroTile1;
+        private MetroFramework.Controls.MetroPanel metroPanel1;
+        private MetroFramework.Controls.MetroGrid metroGrid3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tendonviDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn chucnangDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.BindingSource dONVIBindingSource1;
+        private MetroFramework.Controls.MetroTextBox txtTKDonVi;
+        private MetroFramework.Controls.MetroButton btnTKDonVi;
     }
 }

@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyKhoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ADMIN">
+    <Key>
+      <PropertyRef Name="tendangnhap" />
+    </Key>
+    <Property Name="tendangnhap" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="matkhau" Type="varchar" MaxLength="50" />
+    <Property Name="quanly" Type="int" />
+  </EntityType>
+  <EntityType Name="DONVI">
+    <Key>
+      <PropertyRef Name="ma" />
+    </Key>
+    <Property Name="ma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tendonvi" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="chucnang" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="HANGHOA">
+    <Key>
+      <PropertyRef Name="ma" />
+    </Key>
+    <Property Name="ma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tenhang" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="mota" Type="nvarchar" MaxLength="1024" />
+    <Property Name="donvitinh" Type="varchar" MaxLength="50" />
+    <Property Name="thoigianbaohanh" Type="int" />
+    <Property Name="manhom" Type="int" />
+    <Property Name="soluong" Type="int" />
+  </EntityType>
+  <EntityType Name="HANGNHAP">
+    <Key>
+      <PropertyRef Name="Spnhap" />
+    </Key>
+    <Property Name="Spnhap" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Slchungtu" Type="int" />
+    <Property Name="Slthucnhap" Type="int" />
+    <Property Name="Sphieubaohang" Type="int" />
+    <Property Name="maHang" Type="int" />
+  </EntityType>
+  <EntityType Name="HANGXUAT">
+    <Key>
+      <PropertyRef Name="Spxuat" />
+    </Key>
+    <Property Name="Spxuat" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Slxuat" Type="int" />
+    <Property Name="maHang" Type="int" />
+    <Property Name="maNV" Type="int" />
+  </EntityType>
+  <EntityType Name="NHACUNGCAP">
+    <Key>
+      <PropertyRef Name="ma" />
+    </Key>
+    <Property Name="ma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tenNCC" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="diachi" Type="nvarchar" MaxLength="200" />
+    <Property Name="sodienthoai" Type="varchar" MaxLength="12" />
+  </EntityType>
+  <EntityType Name="NHANVIEN">
+    <Key>
+      <PropertyRef Name="ma" />
+    </Key>
+    <Property Name="ma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="hoten" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="ngaysinh" Type="datetime" />
+    <Property Name="gioitinh" Type="nvarchar" MaxLength="3" />
+    <Property Name="chuvu" Type="nvarchar" MaxLength="200" />
+    <Property Name="madonvi" Type="int" />
+  </EntityType>
+  <EntityType Name="NHOMHANG">
+    <Key>
+      <PropertyRef Name="ma" />
+    </Key>
+    <Property Name="ma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tennhom" Type="nvarchar" MaxLength="200" />
+    <Property Name="tacdung" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="PHIEUNHAP">
+    <Key>
+      <PropertyRef Name="Spnhap" />
+    </Key>
+    <Property Name="Spnhap" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="ngaynhap" Type="datetime" />
+    <Property Name="lydonhap" Type="nvarchar(max)" />
+    <Property Name="maNCC" Type="int" />
+    <Property Name="maNV" Type="int" />
+  </EntityType>
+  <EntityType Name="PHIEUXUAT">
+    <Key>
+      <PropertyRef Name="Spxuat" />
+    </Key>
+    <Property Name="Spxuat" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="ngayxuat" Type="datetime" />
+    <Property Name="lydoxuat" Type="nvarchar(max)" />
+    <Property Name="maNV" Type="int" />
+  </EntityType>
+  <EntityContainer Name="QuanLyKhoModelStoreContainer">
+    <EntitySet Name="ADMIN" EntityType="Self.ADMIN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DONVI" EntityType="Self.DONVI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HANGHOA" EntityType="Self.HANGHOA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HANGNHAP" EntityType="Self.HANGNHAP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HANGXUAT" EntityType="Self.HANGXUAT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NHACUNGCAP" EntityType="Self.NHACUNGCAP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NHANVIEN" EntityType="Self.NHANVIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NHOMHANG" EntityType="Self.NHOMHANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHIEUNHAP" EntityType="Self.PHIEUNHAP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHIEUXUAT" EntityType="Self.PHIEUXUAT" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

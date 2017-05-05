@@ -56,7 +56,6 @@
             this.txtTenDangNhap.MaxLength = 32767;
             this.txtTenDangNhap.Name = "txtTenDangNhap";
             this.txtTenDangNhap.PasswordChar = '\0';
-            this.txtTenDangNhap.PromptText = "Tên đăng nhập";
             this.txtTenDangNhap.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtTenDangNhap.SelectedText = "";
             this.txtTenDangNhap.SelectionLength = 0;
@@ -88,7 +87,6 @@
             this.txtMatKhau.MaxLength = 32767;
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '●';
-            this.txtMatKhau.PromptText = "Mật khẩu";
             this.txtMatKhau.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtMatKhau.SelectedText = "";
             this.txtMatKhau.SelectionLength = 0;

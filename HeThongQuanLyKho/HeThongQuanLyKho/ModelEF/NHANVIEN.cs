@@ -14,27 +14,11 @@ namespace HeThongQuanLyKho.ModelEF
     
     public partial class NHANVIEN
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public NHANVIEN()
-        {
-            this.HANGXUATs = new HashSet<HANGXUAT>();
-            this.PHIEUNHAPs = new HashSet<PHIEUNHAP>();
-            this.PHIEUXUATs = new HashSet<PHIEUXUAT>();
-        }
-    
         public int ma { get; set; }
         public string hoten { get; set; }
         public Nullable<System.DateTime> ngaysinh { get; set; }
         public string gioitinh { get; set; }
         public string chuvu { get; set; }
         public Nullable<int> madonvi { get; set; }
-    
-        public virtual DONVI DONVI { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HANGXUAT> HANGXUATs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PHIEUNHAP> PHIEUNHAPs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PHIEUXUAT> PHIEUXUATs { get; set; }
     }
 }

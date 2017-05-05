@@ -14,13 +14,6 @@ namespace HeThongQuanLyKho.ModelEF
     
     public partial class HANGHOA
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public HANGHOA()
-        {
-            this.HANGNHAPs = new HashSet<HANGNHAP>();
-            this.HANGXUATs = new HashSet<HANGXUAT>();
-        }
-    
         public int ma { get; set; }
         public string tenhang { get; set; }
         public string mota { get; set; }
@@ -28,11 +21,5 @@ namespace HeThongQuanLyKho.ModelEF
         public Nullable<int> thoigianbaohanh { get; set; }
         public Nullable<int> manhom { get; set; }
         public Nullable<int> soluong { get; set; }
-    
-        public virtual NHOMHANG NHOMHANG { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HANGNHAP> HANGNHAPs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HANGXUAT> HANGXUATs { get; set; }
     }
 }

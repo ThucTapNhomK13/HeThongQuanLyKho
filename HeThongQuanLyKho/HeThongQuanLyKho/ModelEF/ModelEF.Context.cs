@@ -13,10 +13,10 @@ namespace HeThongQuanLyKho.ModelEF
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QLKEntities : DbContext
+    public partial class QuanLyKhoEntities : DbContext
     {
-        public QLKEntities()
-            : base("name=QLKEntities")
+        public QuanLyKhoEntities()
+            : base("name=QuanLyKhoEntities")
         {
         }
     
