@@ -384,6 +384,7 @@ namespace HeThongQuanLyKho
                     frmThem.ShowDialog();
                     db.NHANVIENs.Add(frmThem.NhanVienInfo);
                     db.SaveChanges();
+                    LoadNhanVien();
                 }
             }
 
@@ -407,6 +408,8 @@ namespace HeThongQuanLyKho
                         db.NHANVIENs.Attach(nv);
                         db.Entry(nv).State = EntityState.Modified;
                         db.SaveChanges();
+
+                        LoadNhanVien();
                     }
                 }
             else

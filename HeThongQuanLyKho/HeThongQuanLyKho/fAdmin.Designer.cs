@@ -54,6 +54,12 @@
             this.tilSuaNV = new MetroFramework.Controls.MetroTile();
             this.tilThemNV = new MetroFramework.Controls.MetroTile();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
+            this.hotenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaysinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioitinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chuvuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.madonviDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nHANVIENBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
             this.metroButton5 = new MetroFramework.Controls.MetroButton();
@@ -61,6 +67,7 @@
             this.btnSuaNCC = new MetroFramework.Controls.MetroButton();
             this.btnThemNCC = new MetroFramework.Controls.MetroButton();
             this.txtDiaChiNCC = new MetroFramework.Controls.MetroTextBox();
+            this.nHACUNGCAPBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.htmlLabel6 = new MetroFramework.Drawing.Html.HtmlLabel();
             this.txtSDTNCC = new MetroFramework.Controls.MetroTextBox();
             this.htmlLabel4 = new MetroFramework.Drawing.Html.HtmlLabel();
@@ -71,11 +78,19 @@
             this.txtTKNCC = new MetroFramework.Controls.MetroTextBox();
             this.btnTKNCC = new MetroFramework.Controls.MetroButton();
             this.dgvDSNCC = new MetroFramework.Controls.MetroGrid();
+            this.maDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenNCCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diachiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sodienthoaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.txtTKDonVi = new MetroFramework.Controls.MetroTextBox();
             this.btnTKDonVi = new MetroFramework.Controls.MetroButton();
             this.metroGrid3 = new MetroFramework.Controls.MetroGrid();
+            this.maDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tendonviDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chucnangDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dONVIBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.btnSuaDonVi = new MetroFramework.Controls.MetroButton();
             this.btnXoaDonVi = new MetroFramework.Controls.MetroButton();
@@ -91,6 +106,9 @@
             this.txtTKNhomHang = new MetroFramework.Controls.MetroTextBox();
             this.btnTKNhomHang = new MetroFramework.Controls.MetroButton();
             this.metroGrid2 = new MetroFramework.Controls.MetroGrid();
+            this.tennhomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tacdungDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nHOMHANGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
             this.btnNhapLaiNhomHang = new MetroFramework.Controls.MetroButton();
             this.btnXoaNhomHang = new MetroFramework.Controls.MetroButton();
@@ -105,46 +123,28 @@
             this.maDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tendonviDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chucnangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hotenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaysinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gioitinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chuvuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.madonviDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nHANVIENBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.nHACUNGCAPBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.maDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenNCCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diachiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sodienthoaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tendonviDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chucnangDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dONVIBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tennhomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tacdungDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nHOMHANGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nHANVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource1)).BeginInit();
             this.metroTabPage2.SuspendLayout();
             this.metroPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nHACUNGCAPBindingSource1)).BeginInit();
             this.metroPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNCC)).BeginInit();
             this.metroTabPage3.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dONVIBindingSource1)).BeginInit();
             this.metroPanel2.SuspendLayout();
             this.metroTabPage4.SuspendLayout();
             this.metroPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nHOMHANGBindingSource)).BeginInit();
             this.metroPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSDV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nHACUNGCAPBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dONVIBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nHOMHANGBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -351,6 +351,44 @@
             this.metroGrid1.Size = new System.Drawing.Size(1051, 353);
             this.metroGrid1.TabIndex = 2;
             // 
+            // hotenDataGridViewTextBoxColumn
+            // 
+            this.hotenDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.hotenDataGridViewTextBoxColumn.DataPropertyName = "hoten";
+            this.hotenDataGridViewTextBoxColumn.HeaderText = "Họ tên";
+            this.hotenDataGridViewTextBoxColumn.Name = "hotenDataGridViewTextBoxColumn";
+            // 
+            // ngaysinhDataGridViewTextBoxColumn
+            // 
+            this.ngaysinhDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ngaysinhDataGridViewTextBoxColumn.DataPropertyName = "ngaysinh";
+            this.ngaysinhDataGridViewTextBoxColumn.HeaderText = "Ngày sinh";
+            this.ngaysinhDataGridViewTextBoxColumn.Name = "ngaysinhDataGridViewTextBoxColumn";
+            // 
+            // gioitinhDataGridViewTextBoxColumn
+            // 
+            this.gioitinhDataGridViewTextBoxColumn.DataPropertyName = "gioitinh";
+            this.gioitinhDataGridViewTextBoxColumn.HeaderText = "Giới tính";
+            this.gioitinhDataGridViewTextBoxColumn.Name = "gioitinhDataGridViewTextBoxColumn";
+            // 
+            // chuvuDataGridViewTextBoxColumn
+            // 
+            this.chuvuDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.chuvuDataGridViewTextBoxColumn.DataPropertyName = "chuvu";
+            this.chuvuDataGridViewTextBoxColumn.HeaderText = "Chức vụ";
+            this.chuvuDataGridViewTextBoxColumn.Name = "chuvuDataGridViewTextBoxColumn";
+            // 
+            // madonviDataGridViewTextBoxColumn
+            // 
+            this.madonviDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.madonviDataGridViewTextBoxColumn.DataPropertyName = "madonvi";
+            this.madonviDataGridViewTextBoxColumn.HeaderText = "Mã đơn vị";
+            this.madonviDataGridViewTextBoxColumn.Name = "madonviDataGridViewTextBoxColumn";
+            // 
+            // nHANVIENBindingSource1
+            // 
+            this.nHANVIENBindingSource1.DataSource = typeof(HeThongQuanLyKho.ModelEF.NHANVIEN);
+            // 
             // metroTabPage2
             // 
             this.metroTabPage2.Controls.Add(this.metroPanel4);
@@ -466,6 +504,10 @@
             this.txtDiaChiNCC.WaterMark = "Địa chỉ";
             this.txtDiaChiNCC.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtDiaChiNCC.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // nHACUNGCAPBindingSource1
+            // 
+            this.nHACUNGCAPBindingSource1.DataSource = typeof(HeThongQuanLyKho.ModelEF.NHACUNGCAP);
             // 
             // htmlLabel6
             // 
@@ -698,6 +740,38 @@
             this.dgvDSNCC.Size = new System.Drawing.Size(630, 379);
             this.dgvDSNCC.TabIndex = 2;
             // 
+            // maDataGridViewTextBoxColumn
+            // 
+            this.maDataGridViewTextBoxColumn.DataPropertyName = "ma";
+            this.maDataGridViewTextBoxColumn.HeaderText = "ma";
+            this.maDataGridViewTextBoxColumn.Name = "maDataGridViewTextBoxColumn";
+            this.maDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tenNCCDataGridViewTextBoxColumn
+            // 
+            this.tenNCCDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tenNCCDataGridViewTextBoxColumn.DataPropertyName = "tenNCC";
+            this.tenNCCDataGridViewTextBoxColumn.HeaderText = "Tên nhà cung cấp";
+            this.tenNCCDataGridViewTextBoxColumn.Name = "tenNCCDataGridViewTextBoxColumn";
+            this.tenNCCDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // diachiDataGridViewTextBoxColumn
+            // 
+            this.diachiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.diachiDataGridViewTextBoxColumn.DataPropertyName = "diachi";
+            this.diachiDataGridViewTextBoxColumn.HeaderText = "Địa chỉ";
+            this.diachiDataGridViewTextBoxColumn.Name = "diachiDataGridViewTextBoxColumn";
+            this.diachiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sodienthoaiDataGridViewTextBoxColumn
+            // 
+            this.sodienthoaiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sodienthoaiDataGridViewTextBoxColumn.DataPropertyName = "sodienthoai";
+            this.sodienthoaiDataGridViewTextBoxColumn.HeaderText = "Số điện thoại";
+            this.sodienthoaiDataGridViewTextBoxColumn.Name = "sodienthoaiDataGridViewTextBoxColumn";
+            this.sodienthoaiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // metroTabPage3
             // 
             this.metroTabPage3.Controls.Add(this.metroPanel1);
@@ -826,6 +900,33 @@
             this.metroGrid3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metroGrid3.Size = new System.Drawing.Size(647, 370);
             this.metroGrid3.TabIndex = 2;
+            // 
+            // maDataGridViewTextBoxColumn2
+            // 
+            this.maDataGridViewTextBoxColumn2.DataPropertyName = "ma";
+            this.maDataGridViewTextBoxColumn2.HeaderText = "Mã";
+            this.maDataGridViewTextBoxColumn2.Name = "maDataGridViewTextBoxColumn2";
+            this.maDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // tendonviDataGridViewTextBoxColumn1
+            // 
+            this.tendonviDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tendonviDataGridViewTextBoxColumn1.DataPropertyName = "tendonvi";
+            this.tendonviDataGridViewTextBoxColumn1.HeaderText = "Tên đơn vị";
+            this.tendonviDataGridViewTextBoxColumn1.Name = "tendonviDataGridViewTextBoxColumn1";
+            this.tendonviDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // chucnangDataGridViewTextBoxColumn1
+            // 
+            this.chucnangDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.chucnangDataGridViewTextBoxColumn1.DataPropertyName = "chucnang";
+            this.chucnangDataGridViewTextBoxColumn1.HeaderText = "Chức năng";
+            this.chucnangDataGridViewTextBoxColumn1.Name = "chucnangDataGridViewTextBoxColumn1";
+            this.chucnangDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dONVIBindingSource1
+            // 
+            this.dONVIBindingSource1.DataSource = typeof(HeThongQuanLyKho.ModelEF.DONVI);
             // 
             // metroPanel2
             // 
@@ -1126,6 +1227,25 @@
             this.metroGrid2.Size = new System.Drawing.Size(647, 376);
             this.metroGrid2.TabIndex = 2;
             // 
+            // tennhomDataGridViewTextBoxColumn
+            // 
+            this.tennhomDataGridViewTextBoxColumn.DataPropertyName = "tennhom";
+            this.tennhomDataGridViewTextBoxColumn.HeaderText = "Tên nhóm";
+            this.tennhomDataGridViewTextBoxColumn.Name = "tennhomDataGridViewTextBoxColumn";
+            this.tennhomDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tacdungDataGridViewTextBoxColumn
+            // 
+            this.tacdungDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tacdungDataGridViewTextBoxColumn.DataPropertyName = "tacdung";
+            this.tacdungDataGridViewTextBoxColumn.HeaderText = "Tác dụng";
+            this.tacdungDataGridViewTextBoxColumn.Name = "tacdungDataGridViewTextBoxColumn";
+            this.tacdungDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nHOMHANGBindingSource
+            // 
+            this.nHOMHANGBindingSource.DataSource = typeof(HeThongQuanLyKho.ModelEF.NHOMHANG);
+            // 
             // metroPanel5
             // 
             this.metroPanel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -1369,126 +1489,6 @@
             this.chucnangDataGridViewTextBoxColumn.Name = "chucnangDataGridViewTextBoxColumn";
             this.chucnangDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // hotenDataGridViewTextBoxColumn
-            // 
-            this.hotenDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.hotenDataGridViewTextBoxColumn.DataPropertyName = "hoten";
-            this.hotenDataGridViewTextBoxColumn.HeaderText = "Họ tên";
-            this.hotenDataGridViewTextBoxColumn.Name = "hotenDataGridViewTextBoxColumn";
-            // 
-            // ngaysinhDataGridViewTextBoxColumn
-            // 
-            this.ngaysinhDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ngaysinhDataGridViewTextBoxColumn.DataPropertyName = "ngaysinh";
-            this.ngaysinhDataGridViewTextBoxColumn.HeaderText = "Ngày sinh";
-            this.ngaysinhDataGridViewTextBoxColumn.Name = "ngaysinhDataGridViewTextBoxColumn";
-            // 
-            // gioitinhDataGridViewTextBoxColumn
-            // 
-            this.gioitinhDataGridViewTextBoxColumn.DataPropertyName = "gioitinh";
-            this.gioitinhDataGridViewTextBoxColumn.HeaderText = "Giới tính";
-            this.gioitinhDataGridViewTextBoxColumn.Name = "gioitinhDataGridViewTextBoxColumn";
-            // 
-            // chuvuDataGridViewTextBoxColumn
-            // 
-            this.chuvuDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.chuvuDataGridViewTextBoxColumn.DataPropertyName = "chuvu";
-            this.chuvuDataGridViewTextBoxColumn.HeaderText = "Chức vụ";
-            this.chuvuDataGridViewTextBoxColumn.Name = "chuvuDataGridViewTextBoxColumn";
-            // 
-            // madonviDataGridViewTextBoxColumn
-            // 
-            this.madonviDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.madonviDataGridViewTextBoxColumn.DataPropertyName = "madonvi";
-            this.madonviDataGridViewTextBoxColumn.HeaderText = "Mã đơn vị";
-            this.madonviDataGridViewTextBoxColumn.Name = "madonviDataGridViewTextBoxColumn";
-            // 
-            // nHANVIENBindingSource1
-            // 
-            this.nHANVIENBindingSource1.DataSource = typeof(HeThongQuanLyKho.ModelEF.NHANVIEN);
-            // 
-            // nHACUNGCAPBindingSource1
-            // 
-            this.nHACUNGCAPBindingSource1.DataSource = typeof(HeThongQuanLyKho.ModelEF.NHACUNGCAP);
-            // 
-            // maDataGridViewTextBoxColumn
-            // 
-            this.maDataGridViewTextBoxColumn.DataPropertyName = "ma";
-            this.maDataGridViewTextBoxColumn.HeaderText = "ma";
-            this.maDataGridViewTextBoxColumn.Name = "maDataGridViewTextBoxColumn";
-            this.maDataGridViewTextBoxColumn.ReadOnly = true;
-            this.maDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // tenNCCDataGridViewTextBoxColumn
-            // 
-            this.tenNCCDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tenNCCDataGridViewTextBoxColumn.DataPropertyName = "tenNCC";
-            this.tenNCCDataGridViewTextBoxColumn.HeaderText = "Tên nhà cung cấp";
-            this.tenNCCDataGridViewTextBoxColumn.Name = "tenNCCDataGridViewTextBoxColumn";
-            this.tenNCCDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // diachiDataGridViewTextBoxColumn
-            // 
-            this.diachiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.diachiDataGridViewTextBoxColumn.DataPropertyName = "diachi";
-            this.diachiDataGridViewTextBoxColumn.HeaderText = "Địa chỉ";
-            this.diachiDataGridViewTextBoxColumn.Name = "diachiDataGridViewTextBoxColumn";
-            this.diachiDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sodienthoaiDataGridViewTextBoxColumn
-            // 
-            this.sodienthoaiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.sodienthoaiDataGridViewTextBoxColumn.DataPropertyName = "sodienthoai";
-            this.sodienthoaiDataGridViewTextBoxColumn.HeaderText = "Số điện thoại";
-            this.sodienthoaiDataGridViewTextBoxColumn.Name = "sodienthoaiDataGridViewTextBoxColumn";
-            this.sodienthoaiDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // maDataGridViewTextBoxColumn2
-            // 
-            this.maDataGridViewTextBoxColumn2.DataPropertyName = "ma";
-            this.maDataGridViewTextBoxColumn2.HeaderText = "Mã";
-            this.maDataGridViewTextBoxColumn2.Name = "maDataGridViewTextBoxColumn2";
-            this.maDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // tendonviDataGridViewTextBoxColumn1
-            // 
-            this.tendonviDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tendonviDataGridViewTextBoxColumn1.DataPropertyName = "tendonvi";
-            this.tendonviDataGridViewTextBoxColumn1.HeaderText = "Tên đơn vị";
-            this.tendonviDataGridViewTextBoxColumn1.Name = "tendonviDataGridViewTextBoxColumn1";
-            this.tendonviDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // chucnangDataGridViewTextBoxColumn1
-            // 
-            this.chucnangDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.chucnangDataGridViewTextBoxColumn1.DataPropertyName = "chucnang";
-            this.chucnangDataGridViewTextBoxColumn1.HeaderText = "Chức năng";
-            this.chucnangDataGridViewTextBoxColumn1.Name = "chucnangDataGridViewTextBoxColumn1";
-            this.chucnangDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dONVIBindingSource1
-            // 
-            this.dONVIBindingSource1.DataSource = typeof(HeThongQuanLyKho.ModelEF.DONVI);
-            // 
-            // tennhomDataGridViewTextBoxColumn
-            // 
-            this.tennhomDataGridViewTextBoxColumn.DataPropertyName = "tennhom";
-            this.tennhomDataGridViewTextBoxColumn.HeaderText = "Tên nhóm";
-            this.tennhomDataGridViewTextBoxColumn.Name = "tennhomDataGridViewTextBoxColumn";
-            this.tennhomDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tacdungDataGridViewTextBoxColumn
-            // 
-            this.tacdungDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tacdungDataGridViewTextBoxColumn.DataPropertyName = "tacdung";
-            this.tacdungDataGridViewTextBoxColumn.HeaderText = "Tác dụng";
-            this.tacdungDataGridViewTextBoxColumn.Name = "tacdungDataGridViewTextBoxColumn";
-            this.tacdungDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nHOMHANGBindingSource
-            // 
-            this.nHOMHANGBindingSource.DataSource = typeof(HeThongQuanLyKho.ModelEF.NHOMHANG);
-            // 
             // nHANVIENBindingSource
             // 
             this.nHANVIENBindingSource.DataSource = typeof(HeThongQuanLyKho.ModelEF.NHANVIEN);
@@ -1506,25 +1506,25 @@
             this.metroTabPage1.ResumeLayout(false);
             this.metroPanel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource1)).EndInit();
             this.metroTabPage2.ResumeLayout(false);
             this.metroPanel4.ResumeLayout(false);
             this.metroPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nHACUNGCAPBindingSource1)).EndInit();
             this.metroPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNCC)).EndInit();
             this.metroTabPage3.ResumeLayout(false);
             this.metroPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dONVIBindingSource1)).EndInit();
             this.metroPanel2.ResumeLayout(false);
             this.metroTabPage4.ResumeLayout(false);
             this.metroPanel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nHOMHANGBindingSource)).EndInit();
             this.metroPanel5.ResumeLayout(false);
             this.metroPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSDV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nHACUNGCAPBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dONVIBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nHOMHANGBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource)).EndInit();
             this.ResumeLayout(false);
 

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.txtHoTen = new MetroFramework.Controls.MetroTextBox();
+            this.nHANVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.dtpNgaySinh = new MetroFramework.Controls.MetroDateTime();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -40,9 +41,6 @@
             this.btnLuu = new MetroFramework.Controls.MetroButton();
             this.ckbGioiTinh = new MetroFramework.Controls.MetroCheckBox();
             this.tggChucVu = new MetroFramework.Controls.MetroToggle();
-            this.bindingSourceNhanVien = new System.Windows.Forms.BindingSource(this.components);
-            this.nHANVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,6 +74,7 @@
             this.txtHoTen.MaxLength = 32767;
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.PasswordChar = '\0';
+            this.txtHoTen.PromptText = "Họ và tên";
             this.txtHoTen.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtHoTen.SelectedText = "";
             this.txtHoTen.SelectionLength = 0;
@@ -157,7 +156,6 @@
             this.btnLuu.TabIndex = 10;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseSelectable = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // ckbGioiTinh
             // 
@@ -201,8 +199,6 @@
             this.Name = "fThemSuaNV";
             this.Text = "Thêm / Sửa Nhân Viên";
             this.Load += new System.EventHandler(this.fThemSuaNV_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceNhanVien)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,6 +218,5 @@
         private System.Windows.Forms.BindingSource nHANVIENBindingSource;
         private MetroFramework.Controls.MetroCheckBox ckbGioiTinh;
         private MetroFramework.Controls.MetroToggle tggChucVu;
-        private System.Windows.Forms.BindingSource bindingSourceNhanVien;
     }
 }

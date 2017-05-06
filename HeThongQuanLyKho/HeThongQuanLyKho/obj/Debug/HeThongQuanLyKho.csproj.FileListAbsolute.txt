@@ -18,3 +18,4 @@ C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeTho
 C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.fDangNhap.resources
 C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.fHangHoa.resources
 C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.fTrangChu.resources
+C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.csprojResolveAssemblyReference.cache

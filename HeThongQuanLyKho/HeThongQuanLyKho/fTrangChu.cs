@@ -52,7 +52,7 @@ namespace HeThongQuanLyKho
             {
                 frmNX.ShowDialog();
             }
-            this.Close();
+            this.Show();
         }
 
         private void TGoods_Click(object sender, EventArgs e)

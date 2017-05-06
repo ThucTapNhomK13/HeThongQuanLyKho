@@ -33,7 +33,13 @@ namespace HeThongQuanLyKho
 
             }
         }
-        public fThemSuaNV(NHANVIEN nv=null)
+
+        public fThemSuaNV()
+        {
+            InitializeComponent();
+        }
+
+        public fThemSuaNV(NHANVIEN nv = null)
         {
             InitializeComponent();
 
@@ -70,10 +76,7 @@ namespace HeThongQuanLyKho
             }
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
