@@ -142,7 +142,7 @@
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel1.Location = new System.Drawing.Point(839, 52);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(95, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(97, 25);
             this.metroLabel1.TabIndex = 13;
             this.metroLabel1.Text = "Tài khoản: ";
             // 
@@ -158,6 +158,7 @@
             this.Controls.Add(this.TExport);
             this.Controls.Add(this.TAdmin);
             this.Controls.Add(this.TGoods);
+            this.MaximizeBox = false;
             this.Name = "fTrangChu";
             this.Text = "Hệ thống quản lý kho";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;

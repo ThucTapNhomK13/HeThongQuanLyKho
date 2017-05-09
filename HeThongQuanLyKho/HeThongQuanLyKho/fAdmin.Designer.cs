@@ -186,11 +186,10 @@
             this.metroPanel8.Controls.Add(this.tilSuaNV);
             this.metroPanel8.Controls.Add(this.tilThemNV);
             this.metroPanel8.Controls.Add(this.metroGrid1);
-            this.metroPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroPanel8.HorizontalScrollbarBarColor = true;
             this.metroPanel8.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel8.HorizontalScrollbarSize = 10;
-            this.metroPanel8.Location = new System.Drawing.Point(0, 0);
+            this.metroPanel8.Location = new System.Drawing.Point(-4, 4);
             this.metroPanel8.Name = "metroPanel8";
             this.metroPanel8.Size = new System.Drawing.Size(1051, 448);
             this.metroPanel8.TabIndex = 3;
@@ -201,7 +200,7 @@
             // metroTile1
             // 
             this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(16, 27);
+            this.metroTile1.Location = new System.Drawing.Point(0, 27);
             this.metroTile1.Name = "metroTile1";
             this.metroTile1.Size = new System.Drawing.Size(79, 62);
             this.metroTile1.TabIndex = 9;
@@ -264,7 +263,7 @@
             // tilXoaNV
             // 
             this.tilXoaNV.ActiveControl = null;
-            this.tilXoaNV.Location = new System.Drawing.Point(267, 27);
+            this.tilXoaNV.Location = new System.Drawing.Point(251, 27);
             this.tilXoaNV.Name = "tilXoaNV";
             this.tilXoaNV.Size = new System.Drawing.Size(77, 62);
             this.tilXoaNV.TabIndex = 5;
@@ -276,7 +275,7 @@
             // tilSuaNV
             // 
             this.tilSuaNV.ActiveControl = null;
-            this.tilSuaNV.Location = new System.Drawing.Point(184, 27);
+            this.tilSuaNV.Location = new System.Drawing.Point(168, 27);
             this.tilSuaNV.Name = "tilSuaNV";
             this.tilSuaNV.Size = new System.Drawing.Size(77, 62);
             this.tilSuaNV.TabIndex = 4;
@@ -288,7 +287,7 @@
             // tilThemNV
             // 
             this.tilThemNV.ActiveControl = null;
-            this.tilThemNV.Location = new System.Drawing.Point(101, 27);
+            this.tilThemNV.Location = new System.Drawing.Point(85, 27);
             this.tilThemNV.Name = "tilThemNV";
             this.tilThemNV.Size = new System.Drawing.Size(77, 62);
             this.tilThemNV.TabIndex = 3;
@@ -1499,6 +1498,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1099, 570);
             this.Controls.Add(this.metroTabControl1);
+            this.MaximizeBox = false;
             this.Name = "fAdmin";
             this.Text = "Quản trị";
             this.Load += new System.EventHandler(this.fAdmin_Load);
@@ -1588,22 +1588,9 @@
         private MetroFramework.Controls.MetroTextBox txtTacDung;
         private MetroFramework.Drawing.Html.HtmlLabel htmlLabel7;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroPanel metroPanel8;
-        private MetroFramework.Controls.MetroTextBox txtTKNV;
-        private MetroFramework.Controls.MetroTile tilXoaNV;
-        private MetroFramework.Controls.MetroTile tilSuaNV;
-        private MetroFramework.Controls.MetroTile tilThemNV;
-        private MetroFramework.Controls.MetroGrid metroGrid1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hotenDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngaysinhDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gioitinhDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn chuvuDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn madonviDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource nHANVIENBindingSource1;
         private MetroFramework.Controls.MetroButton btnXoaDonVi;
         private MetroFramework.Controls.MetroButton btnSuaDonVi;
-        private MetroFramework.Controls.MetroButton btnTKNV;
-        private MetroFramework.Controls.MetroTile metroTile1;
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroGrid metroGrid3;
         private System.Windows.Forms.DataGridViewTextBoxColumn maDataGridViewTextBoxColumn2;
@@ -1612,5 +1599,18 @@
         private System.Windows.Forms.BindingSource dONVIBindingSource1;
         private MetroFramework.Controls.MetroTextBox txtTKDonVi;
         private MetroFramework.Controls.MetroButton btnTKDonVi;
+        private MetroFramework.Controls.MetroGrid metroGrid1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hotenDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngaysinhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gioitinhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn chuvuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn madonviDataGridViewTextBoxColumn;
+        private MetroFramework.Controls.MetroTile tilThemNV;
+        private MetroFramework.Controls.MetroTile tilSuaNV;
+        private MetroFramework.Controls.MetroTile tilXoaNV;
+        private MetroFramework.Controls.MetroTextBox txtTKNV;
+        private MetroFramework.Controls.MetroButton btnTKNV;
+        private MetroFramework.Controls.MetroTile metroTile1;
+        private MetroFramework.Controls.MetroPanel metroPanel8;
     }
 }

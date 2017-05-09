@@ -1817,6 +1817,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1061, 600);
             this.Controls.Add(this.xxx);
+            this.MaximizeBox = false;
             this.Name = "fNhapXuat";
             this.Text = "Nhập / Xuất";
             this.Load += new System.EventHandler(this.fNhapXuat_Load);

@@ -196,9 +196,11 @@
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.txtHoTen);
             this.Controls.Add(this.metroLabel1);
+            this.MaximizeBox = false;
             this.Name = "fThemSuaNV";
             this.Text = "Thêm / Sửa Nhân Viên";
             this.Load += new System.EventHandler(this.fThemSuaNV_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
