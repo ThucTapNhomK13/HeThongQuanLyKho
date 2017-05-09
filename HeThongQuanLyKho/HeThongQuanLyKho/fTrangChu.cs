@@ -72,7 +72,9 @@ namespace HeThongQuanLyKho
 
         private void THelp_Click(object sender, EventArgs e)
         {
-
+            frmHelp help = new frmHelp();
+            this.Hide();
+            help.Show();
         }
     }
 }
