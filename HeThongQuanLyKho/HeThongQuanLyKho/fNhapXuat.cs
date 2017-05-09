@@ -17,6 +17,10 @@ namespace HeThongQuanLyKho
 {
     public partial class fNhapXuat : MetroFramework.Forms.MetroForm
     {
+        private void LoadSpNhap ()
+        {
+            
+        }
         private void LoadNhaCungCap()
         {
             using (QuanLyKhoEntities db = new QuanLyKhoEntities())
@@ -43,6 +47,7 @@ namespace HeThongQuanLyKho
 
         private void LoadPhieuNhap(List<PHIEUNHAP> ls = null)
         {
+            
             if (ls == null)
                 using (QuanLyKhoEntities db = new QuanLyKhoEntities())
                 {
@@ -88,6 +93,7 @@ namespace HeThongQuanLyKho
 
         private void fNhapXuat_Load(object sender, EventArgs e)
         {
+            LoadNhaCungCap();
             LoadHangNhap();
             LoadHangXuat();
             LoadPhieuNhap();
@@ -155,7 +161,25 @@ namespace HeThongQuanLyKho
 
         private void btnSuaHN_Click(object sender, EventArgs e)
         {
-            txtmahhHN.Enabled = false;
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
+            {
+                var hn = hANGNHAPBindingSource.Current as HANGNHAP;
+                var HN = db.HANGNHAPs.SingleOrDefault(x => x.Spnhap == hn.Spnhap);
+
+                if (HN != null)
+                {
+                    HN.maHang = hn.maHang;
+                    HN.Slchungtu = hn.Slchungtu;
+                    HN.Slthucnhap = hn.Slthucnhap;
+                    HN.Sphieubaohang = hn.Sphieubaohang;
+
+                    db.HANGNHAPs.Attach(HN);
+                    db.Entry(HN).State = EntityState.Modified;
+                    db.SaveChanges();
+
+                    LoadHangNhap();
+                }
+            }
         }
 
         private void btnHxNL_Click(object sender, EventArgs e)
@@ -169,7 +193,23 @@ namespace HeThongQuanLyKho
 
         private void btnHxS_Click(object sender, EventArgs e)
         {
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
+            {
+                var xh = hANGXUATBindingSource.Current as HANGXUAT;
+                var XH = db.HANGXUATs.SingleOrDefault(x => x.Spxuat == xh.Spxuat);
+                if (XH != null)
+                {
+                    XH.maHang = xh.maHang;
+                    XH.maNV = xh.maNV;
+                    XH.Slxuat = xh.Slxuat;
 
+                    db.HANGXUATs.Attach(XH);
+                    db.Entry(XH).State = EntityState.Modified;
+                    db.SaveChanges();
+
+                    LoadHangXuat();
+                }
+            }
         }
 
         private void btnSuaPN_Click(object sender, EventArgs e)
@@ -193,10 +233,7 @@ namespace HeThongQuanLyKho
                         db.SaveChanges();
                         LoadHangNhap();
                     }
-                    
                 }
-
-                
             }
         }
 
@@ -218,9 +255,158 @@ namespace HeThongQuanLyKho
                     }
                     
                 }
-
-                
             }
+        }
+
+        private void btnTkHX_Click(object sender, EventArgs e)
+        {
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
+            {
+                if (txtTkHX.Text == " " || string.IsNullOrEmpty(txtTkHX.Text))
+                {
+                    LoadHangXuat();
+                }
+                else
+                {
+                    var tkXH = db.HANGXUATs.Where(x => x.Spxuat == txtTkHX.Text).ToList();
+                    LoadHangXuat(tkXH);
+                }
+            }
+            
+        }
+
+        private void btnTkHN_Click(object sender, EventArgs e)
+        {
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
+            {
+                if (txtTkHN.Text == " " || string.IsNullOrEmpty(txtTkHN.Text))
+                {
+                    LoadHangNhap();
+                }
+                else
+                {
+                    var tkHN = db.HANGNHAPs.Where(x => x.Spnhap == txtTkHN.Text).ToList();
+                    LoadHangNhap(tkHN);
+                }
+            }
+        }
+
+        private void btnNhapPN_Click(object sender, EventArgs e)
+        {
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
+            {
+                var pn = pHIEUNHAPBindingSource.Current as PHIEUNHAP;
+                if (db.PHIEUNHAPs.SingleOrDefault(x=> x.Spnhap == pn.Spnhap) == null)
+                {
+                    db.PHIEUNHAPs.Add(pn);
+                    db.SaveChanges();
+                }
+                else
+                {
+                    MetroMessageBox.Show(this, "Sản phẩm đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+            }
+        }
+
+        private void btnXoaPN_Click(object sender, EventArgs e)
+        {
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
+            {
+                var pn = pHIEUNHAPBindingSource.Current as PHIEUNHAP;
+                var PN = db.PHIEUNHAPs.SingleOrDefault(x => x.Spnhap == pn.Spnhap);
+                if (PN != null)
+                {
+                    db.PHIEUNHAPs.Remove(PN);
+                    db.SaveChanges();
+                }
+                else
+                {
+                    return;
+                }
+            }
+        }
+
+        private void btnTkPN_Click(object sender, EventArgs e)
+        {
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
+            {
+                if (txtTkPN.Text == " " || string.IsNullOrEmpty(txtTkPN.Text))
+                {
+                    LoadPhieuNhap();
+                }
+                else
+                {
+                    var lsPN = db.PHIEUNHAPs.Where(x => x.Spnhap == txtTkPN.Text).ToList();
+                    LoadPhieuNhap(lsPN);
+                }
+            }
+        }
+
+        private void btnTkPX_Click(object sender, EventArgs e)
+        {
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
+            {
+                if (txtTkPX.Text == " " || string.IsNullOrEmpty(txtTkPX.Text))
+                {
+                    LoadPhieuXuat();
+                }
+                else
+                {
+                    var lsPX = db.PHIEUXUATs.Where(x => x.Spxuat == txtTkPX.Text).ToList();
+                    LoadPhieuXuat(lsPX);
+                }
+            }
+        }
+
+        private void btnPxT_Click(object sender, EventArgs e)
+        {
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
+            {
+                var px = pHIEUXUATBindingSource.Current as PHIEUXUAT;
+                if (db.PHIEUXUATs.SingleOrDefault(x => x.Spxuat == px.Spxuat) == null)
+                {
+                    db.PHIEUXUATs.Add(px);
+                    db.SaveChanges();
+                }
+                else
+                {
+                    MetroMessageBox.Show(this, "Sản phẩm đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+            }
+        }
+
+        private void btnPXx_Click(object sender, EventArgs e)
+        {
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
+            {
+                var px = pHIEUXUATBindingSource.Current as PHIEUXUAT;
+                var PX = db.PHIEUXUATs.SingleOrDefault(x => x.Spxuat == px.Spxuat);
+                if (PX != null)
+                {
+                    db.PHIEUXUATs.Remove(PX);
+                    db.SaveChanges();
+                }
+                else
+                {
+                    return;
+                }
+            }
+        }
+
+        private void btnPxHB_Click(object sender, EventArgs e)
+        {
+            txtPXLyDo.Clear();
+            txtPXSP.Clear();
+            txtPXNV.Clear();
+        }
+
+        private void btnHuyBoPN_Click(object sender, EventArgs e)
+        {
+            txtPNSP.Clear();
+            txtPNNV.Clear();
+            txtPNLyDo.Clear();
         }
     }
 }
