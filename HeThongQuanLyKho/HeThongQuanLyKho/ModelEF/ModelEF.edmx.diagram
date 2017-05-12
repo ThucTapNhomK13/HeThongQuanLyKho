@@ -7,13 +7,13 @@
       <Diagram DiagramId="1ef2117e6e744e5090e67ca0a3a9656a" Name="Diagram1">
         <EntityTypeShape EntityType="QuanLyKhoModel.ADMIN" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyKhoModel.DONVI" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyKhoModel.HANGHOA" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyKhoModel.HANGNHAP" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKhoModel.HANGHOA" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKhoModel.HANGNHAP" Width="1.5" PointX="2.75" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyKhoModel.HANGXUAT" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyKhoModel.NHACUNGCAP" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKhoModel.NHACUNGCAP" Width="1.5" PointX="4.75" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyKhoModel.NHANVIEN" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyKhoModel.NHOMHANG" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyKhoModel.PHIEUNHAP" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKhoModel.PHIEUNHAP" Width="1.5" PointX="6.75" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyKhoModel.PHIEUXUAT" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>

@@ -47,7 +47,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(44, 96);
+            this.metroLabel1.Location = new System.Drawing.Point(45, 114);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(65, 19);
             this.metroLabel1.TabIndex = 0;
@@ -70,7 +70,7 @@
             this.txtHoTen.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nHANVIENBindingSource, "hoten", true));
             this.txtHoTen.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtHoTen.Lines = new string[0];
-            this.txtHoTen.Location = new System.Drawing.Point(127, 92);
+            this.txtHoTen.Location = new System.Drawing.Point(128, 110);
             this.txtHoTen.MaxLength = 32767;
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.PasswordChar = '\0';
@@ -92,7 +92,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(44, 128);
+            this.metroLabel2.Location = new System.Drawing.Point(45, 146);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(66, 19);
             this.metroLabel2.TabIndex = 2;
@@ -103,7 +103,7 @@
             this.dtpNgaySinh.CustomFormat = "MM/dd/yyyy";
             this.dtpNgaySinh.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.nHANVIENBindingSource, "ngaysinh", true));
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgaySinh.Location = new System.Drawing.Point(127, 130);
+            this.dtpNgaySinh.Location = new System.Drawing.Point(128, 148);
             this.dtpNgaySinh.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(230, 29);
@@ -112,7 +112,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(44, 160);
+            this.metroLabel3.Location = new System.Drawing.Point(45, 178);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(57, 19);
             this.metroLabel3.TabIndex = 4;
@@ -121,7 +121,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(44, 192);
+            this.metroLabel4.Location = new System.Drawing.Point(45, 210);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(56, 19);
             this.metroLabel4.TabIndex = 6;
@@ -132,7 +132,7 @@
             this.cmbDonVi.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.nHANVIENBindingSource, "madonvi", true));
             this.cmbDonVi.FormattingEnabled = true;
             this.cmbDonVi.ItemHeight = 23;
-            this.cmbDonVi.Location = new System.Drawing.Point(127, 215);
+            this.cmbDonVi.Location = new System.Drawing.Point(128, 233);
             this.cmbDonVi.Name = "cmbDonVi";
             this.cmbDonVi.Size = new System.Drawing.Size(230, 29);
             this.cmbDonVi.TabIndex = 8;
@@ -141,7 +141,7 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(44, 224);
+            this.metroLabel5.Location = new System.Drawing.Point(45, 242);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(46, 19);
             this.metroLabel5.TabIndex = 9;
@@ -150,7 +150,7 @@
             // btnLuu
             // 
             this.btnLuu.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnLuu.Location = new System.Drawing.Point(266, 266);
+            this.btnLuu.Location = new System.Drawing.Point(267, 284);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(91, 32);
             this.btnLuu.TabIndex = 10;
@@ -161,7 +161,7 @@
             // 
             this.ckbGioiTinh.AutoSize = true;
             this.ckbGioiTinh.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.nHANVIENBindingSource, "gioitinh", true));
-            this.ckbGioiTinh.Location = new System.Drawing.Point(127, 167);
+            this.ckbGioiTinh.Location = new System.Drawing.Point(128, 185);
             this.ckbGioiTinh.Name = "ckbGioiTinh";
             this.ckbGioiTinh.Size = new System.Drawing.Size(39, 15);
             this.ckbGioiTinh.TabIndex = 11;
@@ -173,7 +173,7 @@
             // 
             this.tggChucVu.AutoSize = true;
             this.tggChucVu.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.nHANVIENBindingSource, "chuvu", true));
-            this.tggChucVu.Location = new System.Drawing.Point(127, 190);
+            this.tggChucVu.Location = new System.Drawing.Point(128, 208);
             this.tggChucVu.Name = "tggChucVu";
             this.tggChucVu.Size = new System.Drawing.Size(80, 17);
             this.tggChucVu.TabIndex = 12;
@@ -184,7 +184,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 321);
+            this.ClientSize = new System.Drawing.Size(416, 340);
             this.Controls.Add(this.tggChucVu);
             this.Controls.Add(this.ckbGioiTinh);
             this.Controls.Add(this.btnLuu);

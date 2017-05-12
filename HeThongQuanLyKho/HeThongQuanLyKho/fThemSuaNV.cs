@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using System.Data.Entity;
 using HeThongQuanLyKho.ModelEF;
-using System.Reflection;
 
 namespace HeThongQuanLyKho
 {
@@ -30,7 +21,6 @@ namespace HeThongQuanLyKho
                     nv.chuvu = "0";
                 nv.madonvi = (cmbDonVi.SelectedItem as DONVI).ma;
                 return nv;
-
             }
         }
 
@@ -66,14 +56,18 @@ namespace HeThongQuanLyKho
 
         }
 
-        private void fThemSuaNV_Load(object sender, EventArgs e)
+        private void LoadDonVi()
         {
             cmbDonVi.DisplayMember = "chucnang";
             cmbDonVi.ValueMember = "ma";
-            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
-            {
-                cmbDonVi.DataSource = db.DONVIs.ToList();
-            }
+
+            QuanLyKhoEntities db = new QuanLyKhoEntities();
+            cmbDonVi.DataSource = db.DONVIs.ToList();
+        }
+
+        private void fThemSuaNV_Load(object sender, EventArgs e)
+        {
+            LoadDonVi();
         }
 
         

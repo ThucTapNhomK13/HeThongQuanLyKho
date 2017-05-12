@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace HeThongQuanLyKho
 {
-    public partial class frmHelp : Form
+    public partial class frmHelp : MetroFramework.Forms.MetroForm
     {
         public frmHelp()
         {

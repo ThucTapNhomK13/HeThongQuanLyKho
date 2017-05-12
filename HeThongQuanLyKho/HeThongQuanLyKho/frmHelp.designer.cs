@@ -69,9 +69,9 @@
             this.panel1.Controls.Add(this.webBrowser1);
             this.panel1.Controls.Add(this.toolStrip1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(20, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(793, 376);
+            this.panel1.Size = new System.Drawing.Size(753, 440);
             this.panel1.TabIndex = 0;
             // 
             // webBrowser1
@@ -80,7 +80,7 @@
             this.webBrowser1.Location = new System.Drawing.Point(0, 26);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(793, 350);
+            this.webBrowser1.Size = new System.Drawing.Size(753, 414);
             this.webBrowser1.TabIndex = 2;
             // 
             // toolStrip1
@@ -118,7 +118,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(793, 26);
+            this.toolStrip1.Size = new System.Drawing.Size(753, 26);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -359,7 +359,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(793, 376);
+            this.ClientSize = new System.Drawing.Size(793, 520);
             this.Controls.Add(this.panel1);
             this.Name = "frmHelp";
             this.Text = "Hướng dẫn sử dụng";

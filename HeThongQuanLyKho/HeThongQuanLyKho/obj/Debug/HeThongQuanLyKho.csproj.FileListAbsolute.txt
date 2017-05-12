@@ -41,3 +41,4 @@ C:\Users\occho\documents\GitHub\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyK
 C:\Users\occho\documents\GitHub\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.fTrangChu.resources
 C:\Users\occho\documents\GitHub\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.Properties.Resources.resources
 C:\Users\occho\documents\GitHub\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.csproj.GenerateResource.Cache
+C:\Users\mkcuong\Documents\GitHub\TTNhom\HeThongQuanLyKho\HeThongQuanLyKho\HeThongQuanLyKho\obj\Debug\HeThongQuanLyKho.frmHelp.resources

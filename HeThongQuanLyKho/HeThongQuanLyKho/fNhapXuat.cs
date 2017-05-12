@@ -214,7 +214,28 @@ namespace HeThongQuanLyKho
 
         private void btnSuaPN_Click(object sender, EventArgs e)
         {
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
+            {
+                var xPN = pHIEUNHAPBindingSource.Current as PHIEUNHAP;
+                var xpn = db.PHIEUNHAPs.FirstOrDefault(x => x.Spnhap == xPN.Spnhap);
+                if (xpn != null)
+                {
+                    xpn.lydonhap = xPN.lydonhap;
+                    xpn.maNCC = xPN.maNCC;
+                    xpn.maNV = xPN.maNV;
+                    xpn.ngaynhap = xPN.ngaynhap;
 
+                    db.PHIEUNHAPs.Attach(xpn);
+                    db.Entry(xpn).State = EntityState.Modified;
+                    db.SaveChanges();
+                }
+                else
+                {
+
+                    return;
+                }
+                LoadPhieuNhap();
+            }
         }
 
         private void btnXoaHN_Click(object sender, EventArgs e)
@@ -299,13 +320,14 @@ namespace HeThongQuanLyKho
                 if (db.PHIEUNHAPs.SingleOrDefault(x=> x.Spnhap == pn.Spnhap) == null)
                 {
                     db.PHIEUNHAPs.Add(pn);
-                    db.SaveChanges();
+                    db.SaveChanges();   
                 }
                 else
                 {
                     MetroMessageBox.Show(this, "Sản phẩm đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
+                LoadPhieuNhap();
             }
         }
 
@@ -324,6 +346,7 @@ namespace HeThongQuanLyKho
                 {
                     return;
                 }
+                LoadPhieuNhap();
             }
         }
 
@@ -374,6 +397,7 @@ namespace HeThongQuanLyKho
                     MetroMessageBox.Show(this, "Sản phẩm đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
+                LoadPhieuXuat();
             }
         }
 
@@ -392,6 +416,7 @@ namespace HeThongQuanLyKho
                 {
                     return;
                 }
+                LoadPhieuXuat();
             }
         }
 
@@ -407,6 +432,31 @@ namespace HeThongQuanLyKho
             txtPNSP.Clear();
             txtPNNV.Clear();
             txtPNLyDo.Clear();
+        }
+
+        private void btnPxS_Click(object sender, EventArgs e)
+        {
+            using (QuanLyKhoEntities db = new QuanLyKhoEntities())
+            {
+                var px = pHIEUXUATBindingSource.Current as PHIEUXUAT;
+                var PX = db.PHIEUXUATs.FirstOrDefault(x => x.Spxuat == px.Spxuat);
+
+                if (PX != null)
+                {
+                    PX.lydoxuat = px.lydoxuat;
+                    PX.maNV = px.maNV;
+                    PX.ngayxuat = px.ngayxuat;
+
+                    db.PHIEUXUATs.Attach(PX);
+                    db.Entry(PX).State = EntityState.Modified;
+                    db.SaveChanges();
+                }
+                else
+                {
+                    return;
+                }
+                LoadPhieuXuat();
+            }
         }
     }
 }
