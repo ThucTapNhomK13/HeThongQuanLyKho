@@ -44,7 +44,7 @@ namespace HeThongQuanLyKho
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-            webBrowser1.Navigate("http://anhkhoaito.blogspot.com/2017/03/huong-dan-su-dung-phan-mem-quan-ly-hoc.html/");
+            webBrowser1.Navigate("http://phanmem25az.blogspot.com/2017/05/huong-dan-su-dung-phan-mem-quan-ly-kho.html");
         }
 
         private void frmHelp_Load(object sender, EventArgs e)

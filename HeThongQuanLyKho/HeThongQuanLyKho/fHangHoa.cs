@@ -140,7 +140,9 @@ namespace HeThongQuanLyKho
             LoadHangHoa();
         }
 
-        private void btnTimKiem_Click(object sender, EventArgs e)
+
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
             using (QuanLyKhoEntities db = new QuanLyKhoEntities())
             {
@@ -150,11 +152,10 @@ namespace HeThongQuanLyKho
                 }
                 else
                 {
-                    var ls = db.HANGHOAs.Where(x => x.tenhang == txtTimKiem.Text || x.donvitinh == txtTimKiem.Text).ToList();
+                    var ls = db.HANGHOAs.Where(x => x.tenhang.Contains(txtTimKiem.Text) || x.donvitinh.Contains(txtTimKiem.Text)).ToList();
                     LoadHangHoa(ls);
                 }
             }
-                
         }
     }
 }

@@ -45,7 +45,6 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.txtMoTa = new MetroFramework.Controls.MetroTextBox();
-            this.hANGHOABindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cmbNhomHang = new MetroFramework.Controls.MetroComboBox();
             this.txtBaoHang = new MetroFramework.Controls.MetroTextBox();
             this.txtSoLuong = new MetroFramework.Controls.MetroTextBox();
@@ -53,19 +52,19 @@
             this.txtTenHang = new MetroFramework.Controls.MetroTextBox();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.txtTimKiem = new MetroFramework.Controls.MetroTextBox();
-            this.btnTimKiem = new MetroFramework.Controls.MetroButton();
             this.dgvDSHH = new MetroFramework.Controls.MetroGrid();
+            this.lklQuayLaij = new MetroFramework.Controls.MetroLink();
             this.tenhangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soluongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.donvitinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thoigianbaohanhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manhomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.motaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lklQuayLaij = new MetroFramework.Controls.MetroLink();
+            this.hANGHOABindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.metroPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hANGHOABindingSource1)).BeginInit();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSHH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hANGHOABindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // metroPanel1
@@ -237,10 +236,6 @@
             this.txtMoTa.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtMoTa.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // hANGHOABindingSource1
-            // 
-            this.hANGHOABindingSource1.DataSource = typeof(HeThongQuanLyKho.ModelEF.HANGHOA);
-            // 
             // cmbNhomHang
             // 
             this.cmbNhomHang.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.hANGHOABindingSource1, "manhom", true));
@@ -379,7 +374,6 @@
             // metroPanel2
             // 
             this.metroPanel2.Controls.Add(this.txtTimKiem);
-            this.metroPanel2.Controls.Add(this.btnTimKiem);
             this.metroPanel2.Controls.Add(this.dgvDSHH);
             this.metroPanel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.metroPanel2.HorizontalScrollbarBarColor = true;
@@ -408,7 +402,7 @@
             this.txtTimKiem.CustomButton.UseSelectable = true;
             this.txtTimKiem.CustomButton.Visible = false;
             this.txtTimKiem.Lines = new string[0];
-            this.txtTimKiem.Location = new System.Drawing.Point(171, 34);
+            this.txtTimKiem.Location = new System.Drawing.Point(116, 27);
             this.txtTimKiem.MaxLength = 32767;
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.PasswordChar = '\0';
@@ -425,16 +419,7 @@
             this.txtTimKiem.WaterMark = "Từ khóa";
             this.txtTimKiem.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtTimKiem.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Location = new System.Drawing.Point(75, 34);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(75, 23);
-            this.btnTimKiem.TabIndex = 0;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.UseSelectable = true;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // dgvDSHH
             // 
@@ -492,6 +477,18 @@
             this.dgvDSHH.Size = new System.Drawing.Size(685, 414);
             this.dgvDSHH.TabIndex = 2;
             // 
+            // lklQuayLaij
+            // 
+            this.lklQuayLaij.Image = global::HeThongQuanLyKho.Properties.Resources.icon_402_128;
+            this.lklQuayLaij.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lklQuayLaij.ImageSize = 25;
+            this.lklQuayLaij.Location = new System.Drawing.Point(24, 24);
+            this.lklQuayLaij.Name = "lklQuayLaij";
+            this.lklQuayLaij.Size = new System.Drawing.Size(29, 28);
+            this.lklQuayLaij.TabIndex = 2;
+            this.lklQuayLaij.UseSelectable = true;
+            this.lklQuayLaij.Click += new System.EventHandler(this.lklQuayLaij_Click);
+            // 
             // tenhangDataGridViewTextBoxColumn
             // 
             this.tenhangDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -536,17 +533,9 @@
             this.motaDataGridViewTextBoxColumn.Name = "motaDataGridViewTextBoxColumn";
             this.motaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // lklQuayLaij
+            // hANGHOABindingSource1
             // 
-            this.lklQuayLaij.Image = global::HeThongQuanLyKho.Properties.Resources.icon_402_128;
-            this.lklQuayLaij.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lklQuayLaij.ImageSize = 25;
-            this.lklQuayLaij.Location = new System.Drawing.Point(24, 24);
-            this.lklQuayLaij.Name = "lklQuayLaij";
-            this.lklQuayLaij.Size = new System.Drawing.Size(29, 28);
-            this.lklQuayLaij.TabIndex = 2;
-            this.lklQuayLaij.UseSelectable = true;
-            this.lklQuayLaij.Click += new System.EventHandler(this.lklQuayLaij_Click);
+            this.hANGHOABindingSource1.DataSource = typeof(HeThongQuanLyKho.ModelEF.HANGHOA);
             // 
             // fHangHoa
             // 
@@ -561,9 +550,9 @@
             this.Load += new System.EventHandler(this.fHangHoa_Load);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hANGHOABindingSource1)).EndInit();
             this.metroPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSHH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hANGHOABindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -589,7 +578,6 @@
         private MetroFramework.Controls.MetroButton btnXoa;
         private MetroFramework.Controls.MetroButton btnNhapLai;
         private MetroFramework.Controls.MetroTextBox txtTimKiem;
-        private MetroFramework.Controls.MetroButton btnTimKiem;
         private MetroFramework.Controls.MetroGrid dgvDSHH;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenhangDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn soluongDataGridViewTextBoxColumn;
